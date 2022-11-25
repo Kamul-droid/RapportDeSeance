@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilRifeSimili index{% endblock %}
+
+{% block body %}
+    <h1>ProfilRifeSimili index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_rife_simili in profil_rife_similis %}
+            <tr>
+                <td>{{ profil_rife_simili.id }}</td>
+                <td>{{ profil_rife_simili.nom }}</td>
+                <td>
+                    <a href="{{ path('app_profil_rife_simili_show', {'id': profil_rife_simili.id}) }}">show</a>
+                    <a href="{{ path('app_profil_rife_simili_edit', {'id': profil_rife_simili.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_rife_simili_new') }}">Create new</a>
+{% endblock %}

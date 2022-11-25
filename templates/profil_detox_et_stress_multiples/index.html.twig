@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilDetoxEtStressMultiples index{% endblock %}
+
+{% block body %}
+    <h1>ProfilDetoxEtStressMultiples index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Toxines_environnementales_et_industrielles</th>
+                <th>Pathogenes_et_autres_substances_toxiques</th>
+                <th>Facteurs_de_stress_personnel_et_auto_induit</th>
+                <th>Detox_du_corps</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_detox_et_stress_multiple in profil_detox_et_stress_multiples %}
+            <tr>
+                <td>{{ profil_detox_et_stress_multiple.id }}</td>
+                <td>{{ profil_detox_et_stress_multiple.toxinesEnvironnementalesEtIndustrielles }}</td>
+                <td>{{ profil_detox_et_stress_multiple.pathogenesEtAutresSubstancesToxiques }}</td>
+                <td>{{ profil_detox_et_stress_multiple.facteursDeStressPersonnelEtAutoInduit }}</td>
+                <td>{{ profil_detox_et_stress_multiple.detoxDuCorps }}</td>
+                <td>
+                    <a href="{{ path('app_profil_detox_et_stress_multiples_show', {'id': profil_detox_et_stress_multiple.id}) }}">show</a>
+                    <a href="{{ path('app_profil_detox_et_stress_multiples_edit', {'id': profil_detox_et_stress_multiple.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_detox_et_stress_multiples_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilOreillesYeux{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilOreillesYeux</h1>
+
+    {{ include('profil_oreilles_yeux/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_oreilles_yeux_index') }}">back to list</a>
+{% endblock %}

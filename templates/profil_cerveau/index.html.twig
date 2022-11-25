@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Cerveau{% endblock %}
+
+{% block body %}
+    <table >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reglage_ondes_cerebrales</th>
+                <th>ADD_</th>
+                <th>DHDA</th>
+                <th>Equilibre_harmonique_cerveau_gauche_cerveau_droit</th>
+                <th>Choix_item</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_cerveau in profil_cerveaus %}
+            <tr>
+                <td>{{ profil_cerveau.id }}</td>
+                <td>{{ profil_cerveau.reglageOndesCerebrales }}</td>
+                <td>{{ profil_cerveau.ADD }}</td>
+                <td>{{ profil_cerveau.DHDA }}</td>
+                <td>{{ profil_cerveau.equilibreHarmoniqueCerveauGaucheCerveauDroit }}</td>
+                <td>{{ profil_cerveau.choixItem }}</td>
+                <td>
+                    <a href="{{ path('app_profil_cerveau_show', {'id': profil_cerveau.id}) }}">show</a>
+                    <a href="{{ path('app_profil_cerveau_edit', {'id': profil_cerveau.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_cerveau_new') }}">Create new</a>
+{% endblock %}

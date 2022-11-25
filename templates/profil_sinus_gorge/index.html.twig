@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilSinusGorge index{% endblock %}
+
+{% block body %}
+    <h1>ProfilSinusGorge index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Transfert</th>
+                <th>Choix_bio_specifique</th>
+                <th>Choix_items</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_sinus_gorge in profil_sinus_gorges %}
+            <tr>
+                <td>{{ profil_sinus_gorge.id }}</td>
+                <td>{{ profil_sinus_gorge.transfert }}</td>
+                <td>{{ profil_sinus_gorge.choixBioSpecifique }}</td>
+                <td>{{ profil_sinus_gorge.choixItems }}</td>
+                <td>
+                    <a href="{{ path('app_profil_sinus_gorge_show', {'id': profil_sinus_gorge.id}) }}">show</a>
+                    <a href="{{ path('app_profil_sinus_gorge_edit', {'id': profil_sinus_gorge.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_sinus_gorge_new') }}">Create new</a>
+{% endblock %}

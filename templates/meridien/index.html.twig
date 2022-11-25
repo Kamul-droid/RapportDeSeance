@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Meridien {% endblock %}
+
+{% block monTitre %}<div class="fst-italic">Mes Meridiens</div>{% endblock %}
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for meridien in meridiens %}
+            <tr>
+                <td>{{ meridien.id }}</td>
+                <td>{{ meridien.nom }}</td>
+                <td>
+                    <a href="{{ path('app_meridien_show', {'id': meridien.id}) }}">show</a>
+                    <a href="{{ path('app_meridien_edit', {'id': meridien.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_meridien_new') }}">Ajouter Meridien</a></div>
+{% endblock %}

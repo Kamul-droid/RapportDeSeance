@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EquilibreHarmoniqueCerveauGaucheCerveauDroit{% endblock %}
+
+{% block body %}
+    <h1>EquilibreHarmoniqueCerveauGaucheCerveauDroit</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ equilibre_harmonique_cerveau_gauche_cerveau_droit.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ equilibre_harmonique_cerveau_gauche_cerveau_droit.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_equilibre_harmonique_cerveau_gauche_cerveau_droit_index') }}">back to list</a>
+
+    <a href="{{ path('app_equilibre_harmonique_cerveau_gauche_cerveau_droit_edit', {'id': equilibre_harmonique_cerveau_gauche_cerveau_droit.id}) }}">edit</a>
+
+    {{ include('equilibre_harmonique_cerveau_gauche_cerveau_droit/_delete_form.html.twig') }}
+{% endblock %}

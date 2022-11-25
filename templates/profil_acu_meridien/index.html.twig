@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Acu-Meridien {% endblock %}
+
+{% block body %}
+    <table >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Meridien</th>
+                <th>Feedback</th>
+                <th>Commentaire</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_acu_meridien in profil_acu_meridiens %}
+            <tr>
+                <td>{{ profil_acu_meridien.id }}</td>
+                <td>{{ profil_acu_meridien.meridien }}</td>
+                <td>{{ profil_acu_meridien.feedback }}</td>
+                <td>{{ profil_acu_meridien.commentaire }}</td>
+                <td>
+                    <a href="{{ path('app_profil_acu_meridien_show', {'id': profil_acu_meridien.id}) }}">show</a>
+                    <a href="{{ path('app_profil_acu_meridien_edit', {'id': profil_acu_meridien.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_acu_meridien_new') }}">Create new</a>
+{% endblock %}

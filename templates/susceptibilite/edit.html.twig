@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Susceptibilite{% endblock %}
+
+{% block body %}
+    <h1>Edit Susceptibilite</h1>
+
+    {{ include('susceptibilite/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_susceptibilite_index') }}">back to list</a>
+
+    {{ include('susceptibilite/_delete_form.html.twig') }}
+{% endblock %}

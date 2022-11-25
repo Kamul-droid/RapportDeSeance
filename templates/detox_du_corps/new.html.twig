@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New DetoxDuCorps{% endblock %}
+
+{% block body %}
+    <h1>Create new DetoxDuCorps</h1>
+
+    {{ include('detox_du_corps/_form.html.twig') }}
+
+    <a href="{{ path('app_detox_du_corps_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Vitamines{% endblock %}
+
+{% block body %}
+    <h1>Create new Vitamines</h1>
+
+    {{ include('vitamines/_form.html.twig') }}
+
+    <a href="{{ path('app_vitamines_index') }}">back to list</a>
+{% endblock %}

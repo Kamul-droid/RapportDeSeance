@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilCirculationCoeur index{% endblock %}
+
+{% block body %}
+    <h1>ProfilCirculationCoeur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Transfert</th>
+                <th>Valves_arteres</th>
+                <th>Choix_biospecifique</th>
+                <th>Choix_item</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_circulation_coeur in profil_circulation_coeurs %}
+            <tr>
+                <td>{{ profil_circulation_coeur.id }}</td>
+                <td>{{ profil_circulation_coeur.transfert }}</td>
+                <td>{{ profil_circulation_coeur.valvesArteres }}</td>
+                <td>{{ profil_circulation_coeur.choixBiospecifique }}</td>
+                <td>{{ profil_circulation_coeur.choixItem }}</td>
+                <td>
+                    <a href="{{ path('app_profil_circulation_coeur_show', {'id': profil_circulation_coeur.id}) }}">show</a>
+                    <a href="{{ path('app_profil_circulation_coeur_edit', {'id': profil_circulation_coeur.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_circulation_coeur_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ChronologieDesFacteurs{% endblock %}
+
+{% block body %}
+    <h1>Edit ChronologieDesFacteurs</h1>
+
+    {{ include('chronologie_des_facteurs/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_chronologie_des_facteurs_index') }}">back to list</a>
+
+    {{ include('chronologie_des_facteurs/_delete_form.html.twig') }}
+{% endblock %}

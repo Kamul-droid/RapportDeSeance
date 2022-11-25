@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Hormonal{% endblock %}
+
+{% block body %}
+    <h1>Profil Hormonal</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Balance_hormonale_femelle</th>
+                <th>Balance_hormonale_male</th>
+                <th>Glandes_hormones</th>
+                <th>Commentaire</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_hormonal in profil_hormonals %}
+            <tr>
+                <td>{{ profil_hormonal.id }}</td>
+                <td>{{ profil_hormonal.balanceHormonaleFemelle }}</td>
+                <td>{{ profil_hormonal.balanceHormonaleMale }}</td>
+                <td>{{ profil_hormonal.glandesHormones }}</td>
+                <td>{{ profil_hormonal.commentaire }}</td>
+                <td>
+                    <a href="{{ path('app_profil_hormonal_show', {'id': profil_hormonal.id}) }}">show</a>
+                    <a href="{{ path('app_profil_hormonal_edit', {'id': profil_hormonal.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_hormonal_new') }}">Create new</a>
+{% endblock %}

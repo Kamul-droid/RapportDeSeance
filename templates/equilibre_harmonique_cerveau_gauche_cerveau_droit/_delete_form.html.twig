@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('app_equilibre_harmonique_cerveau_gauche_cerveau_droit_delete', {'id': equilibre_harmonique_cerveau_gauche_cerveau_droit.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ equilibre_harmonique_cerveau_gauche_cerveau_droit.id) }}">
+    <button class="btn">Delete</button>
+</form>

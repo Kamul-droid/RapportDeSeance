@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilRachidien{% endblock %}
+
+{% block body %}
+    <h1>ProfilRachidien</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_rachidien.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ profil_rachidien.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_rachidien_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_rachidien_edit', {'id': profil_rachidien.id}) }}">edit</a>
+
+    {{ include('profil_rachidien/_delete_form.html.twig') }}
+{% endblock %}

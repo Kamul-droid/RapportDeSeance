@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilIridologie{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilIridologie</h1>
+
+    {{ include('profil_iridologie/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_iridologie_index') }}">back to list</a>
+
+    {{ include('profil_iridologie/_delete_form.html.twig') }}
+{% endblock %}

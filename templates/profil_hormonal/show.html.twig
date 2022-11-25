@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilHormonal{% endblock %}
+
+{% block body %}
+    <h1>ProfilHormonal</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_hormonal.id }}</td>
+            </tr>
+            <tr>
+                <th>Balance_hormonale_femelle</th>
+                <td>{{ profil_hormonal.balanceHormonaleFemelle }}</td>
+            </tr>
+            <tr>
+                <th>Balance_hormonale_male</th>
+                <td>{{ profil_hormonal.balanceHormonaleMale }}</td>
+            </tr>
+            <tr>
+                <th>Glandes_hormones</th>
+                <td>{{ profil_hormonal.glandesHormones }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ profil_hormonal.commentaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_hormonal_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_hormonal_edit', {'id': profil_hormonal.id}) }}">edit</a>
+
+    {{ include('profil_hormonal/_delete_form.html.twig') }}
+{% endblock %}

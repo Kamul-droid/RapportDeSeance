@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit PathogenesEtAutresSubstancesToxiques{% endblock %}
+
+{% block body %}
+    <h1>Edit PathogenesEtAutresSubstancesToxiques</h1>
+
+    {{ include('pathogenes_et_autres_substances_toxiques/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_pathogenes_et_autres_substances_toxiques_index') }}">back to list</a>
+
+    {{ include('pathogenes_et_autres_substances_toxiques/_delete_form.html.twig') }}
+{% endblock %}

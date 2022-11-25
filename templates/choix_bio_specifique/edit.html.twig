@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ChoixBioSpecifique{% endblock %}
+
+{% block body %}
+    <h1>Edit ChoixBioSpecifique</h1>
+
+    {{ include('choix_bio_specifique/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_choix_bio_specifique_index') }}">back to list</a>
+
+    {{ include('choix_bio_specifique/_delete_form.html.twig') }}
+{% endblock %}

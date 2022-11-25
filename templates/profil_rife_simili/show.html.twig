@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilRifeSimili{% endblock %}
+
+{% block body %}
+    <h1>ProfilRifeSimili</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_rife_simili.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ profil_rife_simili.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_rife_simili_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_rife_simili_edit', {'id': profil_rife_simili.id}) }}">edit</a>
+
+    {{ include('profil_rife_simili/_delete_form.html.twig') }}
+{% endblock %}

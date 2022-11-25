@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AnimauxFamilles{% endblock %}
+
+{% block body %}
+    <h1>AnimauxFamilles</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ animaux_famille.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ animaux_famille.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_animaux_familles_index') }}">back to list</a>
+
+    <a href="{{ path('app_animaux_familles_edit', {'id': animaux_famille.id}) }}">edit</a>
+
+    {{ include('animaux_familles/_delete_form.html.twig') }}
+{% endblock %}

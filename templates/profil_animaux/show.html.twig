@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilAnimaux{% endblock %}
+
+{% block body %}
+    <h1>ProfilAnimaux</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_animaux.id }}</td>
+            </tr>
+            <tr>
+                <th>Animaux_familles</th>
+                <td>{{ profil_animaux.animauxFamilles }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_animaux_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_animaux_edit', {'id': profil_animaux.id}) }}">edit</a>
+
+    {{ include('profil_animaux/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pathogenes Et Autres Substances Toxiques{% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> Pathogènes Et Autres Substances Toxiques</div>{% endblock %}
+
+{% block body %}
+<table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pathogenes_et_autres_substances_toxique in pathogenes_et_autres_substances_toxiques %}
+            <tr>
+                <td>{{ pathogenes_et_autres_substances_toxique.id }}</td>
+                <td>{{ pathogenes_et_autres_substances_toxique.nom }}</td>
+                <td>
+                    <a href="{{ path('app_pathogenes_et_autres_substances_toxiques_show', {'id': pathogenes_et_autres_substances_toxique.id}) }}">show</a>
+                    <a href="{{ path('app_pathogenes_et_autres_substances_toxiques_edit', {'id': pathogenes_et_autres_substances_toxique.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_pathogenes_et_autres_substances_toxiques_new') }}">Ajouter Pathogènes</a></div>
+{% endblock %}

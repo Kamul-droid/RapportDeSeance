@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FacteursDeStressPersonnelEtAutoInduit{% endblock %}
+
+{% block body %}
+    <h1>FacteursDeStressPersonnelEtAutoInduit</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ facteurs_de_stress_personnel_et_auto_induit.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ facteurs_de_stress_personnel_et_auto_induit.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_facteurs_de_stress_personnel_et_auto_induit_index') }}">back to list</a>
+
+    <a href="{{ path('app_facteurs_de_stress_personnel_et_auto_induit_edit', {'id': facteurs_de_stress_personnel_et_auto_induit.id}) }}">edit</a>
+
+    {{ include('facteurs_de_stress_personnel_et_auto_induit/_delete_form.html.twig') }}
+{% endblock %}

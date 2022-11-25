@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ConseilEvaluationPourAutoEvaluation{% endblock %}
+
+{% block body %}
+    <h1>ConseilEvaluationPourAutoEvaluation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ conseil_evaluation_pour_auto_evaluation.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ conseil_evaluation_pour_auto_evaluation.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_conseil_evaluation_pour_auto_evaluation_index') }}">back to list</a>
+
+    <a href="{{ path('app_conseil_evaluation_pour_auto_evaluation_edit', {'id': conseil_evaluation_pour_auto_evaluation.id}) }}">edit</a>
+
+    {{ include('conseil_evaluation_pour_auto_evaluation/_delete_form.html.twig') }}
+{% endblock %}

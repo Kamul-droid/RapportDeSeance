@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Susceptibilite{% endblock %}
+
+{% block body %}
+    <h1>Susceptibilite</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ susceptibilite.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ susceptibilite.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_susceptibilite_index') }}">back to list</a>
+
+    <a href="{{ path('app_susceptibilite_edit', {'id': susceptibilite.id}) }}">edit</a>
+
+    {{ include('susceptibilite/_delete_form.html.twig') }}
+{% endblock %}

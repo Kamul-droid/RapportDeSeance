@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BalanceHormonaleMale{% endblock %}
+
+{% block body %}
+    <h1>BalanceHormonaleMale</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ balance_hormonale_male.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ balance_hormonale_male.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_balance_hormonale_male_index') }}">back to list</a>
+
+    <a href="{{ path('app_balance_hormonale_male_edit', {'id': balance_hormonale_male.id}) }}">edit</a>
+
+    {{ include('balance_hormonale_male/_delete_form.html.twig') }}
+{% endblock %}

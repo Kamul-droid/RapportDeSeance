@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilIridologie{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilIridologie</h1>
+
+    {{ include('profil_iridologie/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_iridologie_index') }}">back to list</a>
+{% endblock %}

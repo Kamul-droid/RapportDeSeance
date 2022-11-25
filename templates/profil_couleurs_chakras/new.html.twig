@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilCouleursChakras{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilCouleursChakras</h1>
+
+    {{ include('profil_couleurs_chakras/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_couleurs_chakras_index') }}">back to list</a>
+{% endblock %}

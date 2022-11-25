@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilCosmetique{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilCosmetique</h1>
+
+    {{ include('profil_cosmetique/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_cosmetique_index') }}">back to list</a>
+{% endblock %}

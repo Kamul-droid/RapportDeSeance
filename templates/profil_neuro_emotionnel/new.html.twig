@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilNeuroEmotionnel{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilNeuroEmotionnel</h1>
+
+    {{ include('profil_neuro_emotionnel/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_neuro_emotionnel_index') }}">back to list</a>
+{% endblock %}

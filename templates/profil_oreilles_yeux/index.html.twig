@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilOreillesYeux index{% endblock %}
+
+{% block body %}
+    <h1>ProfilOreillesYeux index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Transfert</th>
+                <th>Choix_bio_specifique</th>
+                <th>Choix_items</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_oreilles_yeux in profil_oreilles_yeuxes %}
+            <tr>
+                <td>{{ profil_oreilles_yeux.id }}</td>
+                <td>{{ profil_oreilles_yeux.transfert }}</td>
+                <td>{{ profil_oreilles_yeux.choixBioSpecifique }}</td>
+                <td>{{ profil_oreilles_yeux.choixItems }}</td>
+                <td>
+                    <a href="{{ path('app_profil_oreilles_yeux_show', {'id': profil_oreilles_yeux.id}) }}">show</a>
+                    <a href="{{ path('app_profil_oreilles_yeux_edit', {'id': profil_oreilles_yeux.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_oreilles_yeux_new') }}">Create new</a>
+{% endblock %}

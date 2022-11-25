@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('app_profil_transformation_emtionnelle_et_chronologique_delete', {'id': profil_transformation_emtionnelle_et_chronologique.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ profil_transformation_emtionnelle_et_chronologique.id) }}">
+    <button class="btn">Delete</button>
+</form>

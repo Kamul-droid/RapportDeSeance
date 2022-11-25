@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilTransformationEmtionnelleEtChronologique{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilTransformationEmtionnelleEtChronologique</h1>
+
+    {{ include('profil_transformation_emtionnelle_et_chronologique/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_transformation_emtionnelle_et_chronologique_index') }}">back to list</a>
+
+    {{ include('profil_transformation_emtionnelle_et_chronologique/_delete_form.html.twig') }}
+{% endblock %}

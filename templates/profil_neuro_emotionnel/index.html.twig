@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilNeuroEmotionnel index{% endblock %}
+
+{% block body %}
+    <h1>ProfilNeuroEmotionnel index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Conseil_evaluation_pour_auto_evaluation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_neuro_emotionnel in profil_neuro_emotionnels %}
+            <tr>
+                <td>{{ profil_neuro_emotionnel.id }}</td>
+                <td>{{ profil_neuro_emotionnel.conseilEvaluationPourAutoEvaluation }}</td>
+                <td>
+                    <a href="{{ path('app_profil_neuro_emotionnel_show', {'id': profil_neuro_emotionnel.id}) }}">show</a>
+                    <a href="{{ path('app_profil_neuro_emotionnel_edit', {'id': profil_neuro_emotionnel.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_neuro_emotionnel_new') }}">Create new</a>
+{% endblock %}

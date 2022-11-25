@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FacteursGeneraux index{% endblock %}
+{% block monTitre %}<div class="fst-italic"> Facteurs Generaux </div>{% endblock %}
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facteurs_generaux in facteurs_generauxes %}
+            <tr>
+                <td>{{ facteurs_generaux.id }}</td>
+                <td>{{ facteurs_generaux.nom }}</td>
+                <td>
+                    <a href="{{ path('app_facteurs_generaux_show', {'id': facteurs_generaux.id}) }}">show</a>
+                    <a href="{{ path('app_facteurs_generaux_edit', {'id': facteurs_generaux.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_facteurs_generaux_new') }}">Create new</a></div>
+{% endblock %}

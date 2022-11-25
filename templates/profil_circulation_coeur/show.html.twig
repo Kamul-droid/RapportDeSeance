@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilCirculationCoeur{% endblock %}
+
+{% block body %}
+    <h1>ProfilCirculationCoeur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_circulation_coeur.id }}</td>
+            </tr>
+            <tr>
+                <th>Transfert</th>
+                <td>{{ profil_circulation_coeur.transfert }}</td>
+            </tr>
+            <tr>
+                <th>Valves_arteres</th>
+                <td>{{ profil_circulation_coeur.valvesArteres }}</td>
+            </tr>
+            <tr>
+                <th>Choix_biospecifique</th>
+                <td>{{ profil_circulation_coeur.choixBiospecifique }}</td>
+            </tr>
+            <tr>
+                <th>Choix_item</th>
+                <td>{{ profil_circulation_coeur.choixItem }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_circulation_coeur_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_circulation_coeur_edit', {'id': profil_circulation_coeur.id}) }}">edit</a>
+
+    {{ include('profil_circulation_coeur/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilRegistreAutoProgramme{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilRegistreAutoProgramme</h1>
+
+    {{ include('profil_registre_auto_programme/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_registre_auto_programme_index') }}">back to list</a>
+
+    {{ include('profil_registre_auto_programme/_delete_form.html.twig') }}
+{% endblock %}

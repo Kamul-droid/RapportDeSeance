@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilRegistreSusceptibilite index{% endblock %}
+
+{% block body %}
+    <h1>ProfilRegistreSusceptibilite index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Registre_de_susceptibilite</th>
+                <th>Transfert</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_registre_susceptibilite in profil_registre_susceptibilites %}
+            <tr>
+                <td>{{ profil_registre_susceptibilite.id }}</td>
+                <td>{{ profil_registre_susceptibilite.nom }}</td>
+                <td>{{ profil_registre_susceptibilite.registreDeSusceptibilite }}</td>
+                <td>{{ profil_registre_susceptibilite.transfert }}</td>
+                <td>
+                    <a href="{{ path('app_profil_registre_susceptibilite_show', {'id': profil_registre_susceptibilite.id}) }}">show</a>
+                    <a href="{{ path('app_profil_registre_susceptibilite_edit', {'id': profil_registre_susceptibilite.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_registre_susceptibilite_new') }}">Create new</a>
+{% endblock %}

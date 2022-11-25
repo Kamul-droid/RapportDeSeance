@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ConseilEvaluationPourAutoEvaluation {% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> Conseil Evaluation Pour Auto Evaluation</div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for conseil_evaluation_pour_auto_evaluation in conseil_evaluation_pour_auto_evaluations %}
+            <tr>
+                <td>{{ conseil_evaluation_pour_auto_evaluation.id }}</td>
+                <td>{{ conseil_evaluation_pour_auto_evaluation.nom }}</td>
+                <td>
+                    <a href="{{ path('app_conseil_evaluation_pour_auto_evaluation_show', {'id': conseil_evaluation_pour_auto_evaluation.id}) }}">show</a>
+                    <a href="{{ path('app_conseil_evaluation_pour_auto_evaluation_edit', {'id': conseil_evaluation_pour_auto_evaluation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_conseil_evaluation_pour_auto_evaluation_new') }}">Ajouter Meridien</a></div>
+{% endblock %}

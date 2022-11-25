@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ReglageOndesCerebrales{% endblock %}
+
+{% block body %}
+    <h1>ReglageOndesCerebrales</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reglage_ondes_cerebrale.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ reglage_ondes_cerebrale.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_reglage_ondes_cerebrales_index') }}">back to list</a>
+
+    <a href="{{ path('app_reglage_ondes_cerebrales_edit', {'id': reglage_ondes_cerebrale.id}) }}">edit</a>
+
+    {{ include('reglage_ondes_cerebrales/_delete_form.html.twig') }}
+{% endblock %}

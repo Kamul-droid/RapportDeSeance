@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Os {% endblock %}
+
+{% block body %}
+    <h1>ProfilOs index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Transfert</th>
+                <th>ChoixBioSpecifique</th>
+                <th>Reduction</th>
+                <th>Nom_os</th>
+                <th>Liste_items</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_o in profil_os %}
+            <tr>
+                <td>{{ profil_o.id }}</td>
+                <td>{{ profil_o.transfert }}</td>
+                <td>{{ profil_o.choixBioSpecifique }}</td>
+                <td>{{ profil_o.reduction }}</td>
+                <td>{{ profil_o.nomOs }}</td>
+                <td>{{ profil_o.listeItems }}</td>
+                <td>
+                    <a href="{{ path('app_profil_os_show', {'id': profil_o.id}) }}">show</a>
+                    <a href="{{ path('app_profil_os_edit', {'id': profil_o.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_os_new') }}">Create new</a>
+{% endblock %}

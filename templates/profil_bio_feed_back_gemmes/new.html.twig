@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilBioFeedBackGemmes{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilBioFeedBackGemmes</h1>
+
+    {{ include('profil_bio_feed_back_gemmes/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_bio_feed_back_gemmes_index') }}">back to list</a>
+{% endblock %}

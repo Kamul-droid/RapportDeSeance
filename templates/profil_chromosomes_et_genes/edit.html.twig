@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilChromosomesEtGenes{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilChromosomesEtGenes</h1>
+
+    {{ include('profil_chromosomes_et_genes/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_chromosomes_et_genes_index') }}">back to list</a>
+
+    {{ include('profil_chromosomes_et_genes/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MiasmesEtAntiVieillissement{% endblock %}
+
+{% block body %}
+    <h1>MiasmesEtAntiVieillissement</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ miasmes_et_anti_vieillissement.id }}</td>
+            </tr>
+            <tr>
+                <th>Facteurs_miasmatiques</th>
+                <td>{{ miasmes_et_anti_vieillissement.facteursMiasmatiques }}</td>
+            </tr>
+            <tr>
+                <th>Facteurs_de_stress</th>
+                <td>{{ miasmes_et_anti_vieillissement.facteursDeStress }}</td>
+            </tr>
+            <tr>
+                <th>Reaction_age</th>
+                <td>{{ miasmes_et_anti_vieillissement.reactionAge }}</td>
+            </tr>
+            <tr>
+                <th>Facteurs_generaux</th>
+                <td>{{ miasmes_et_anti_vieillissement.facteursGeneraux }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_miasmes_et_anti_vieillissement_index') }}">back to list</a>
+
+    <a href="{{ path('app_miasmes_et_anti_vieillissement_edit', {'id': miasmes_et_anti_vieillissement.id}) }}">edit</a>
+
+    {{ include('miasmes_et_anti_vieillissement/_delete_form.html.twig') }}
+{% endblock %}

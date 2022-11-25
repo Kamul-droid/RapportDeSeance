@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Fill protocol SYSTEM{% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> FILL LIFE SYSTEM </div>{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_end(form) }}
+
+    <div class="text-center">
+        {{ include('acides_amines/_form.html.twig') }}
+    </div>
+    <div class="text-center">
+
+        <button class="container">
+            <a class=" btn btn-warning" href="{{ path('app_home1') }}">Creer une nouvelle fiche </a>
+
+        </button>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New PathogenesEtAutresSubstancesToxiques{% endblock %}
+
+{% block body %}
+    <h1>Create new PathogenesEtAutresSubstancesToxiques</h1>
+
+    {{ include('pathogenes_et_autres_substances_toxiques/_form.html.twig') }}
+
+    <a href="{{ path('app_pathogenes_et_autres_substances_toxiques_index') }}">back to list</a>
+{% endblock %}

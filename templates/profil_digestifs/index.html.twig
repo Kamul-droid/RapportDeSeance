@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilDigestifs index{% endblock %}
+
+{% block body %}
+    <h1>ProfilDigestifs index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Transfert</th>
+                <th>Choix_bio_specifique</th>
+                <th>Choix_items</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_digestif in profil_digestifs %}
+            <tr>
+                <td>{{ profil_digestif.id }}</td>
+                <td>{{ profil_digestif.transfert }}</td>
+                <td>{{ profil_digestif.choixBioSpecifique }}</td>
+                <td>{{ profil_digestif.choixItems }}</td>
+                <td>
+                    <a href="{{ path('app_profil_digestifs_show', {'id': profil_digestif.id}) }}">show</a>
+                    <a href="{{ path('app_profil_digestifs_edit', {'id': profil_digestif.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_digestifs_new') }}">Create new</a>
+{% endblock %}

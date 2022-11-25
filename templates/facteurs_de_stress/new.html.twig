@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FacteursDeStress{% endblock %}
+
+{% block body %}
+    <h1>Create new FacteursDeStress</h1>
+
+    {{ include('facteurs_de_stress/_form.html.twig') }}
+
+    <a href="{{ path('app_facteurs_de_stress_index') }}">back to list</a>
+{% endblock %}

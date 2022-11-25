@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilBioFeedBackGemmes index{% endblock %}
+
+{% block body %}
+    <h1>ProfilBioFeedBackGemmes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_bio_feed_back_gemme in profil_bio_feed_back_gemmes %}
+            <tr>
+                <td>{{ profil_bio_feed_back_gemme.id }}</td>
+                <td>
+                    <a href="{{ path('app_profil_bio_feed_back_gemmes_show', {'id': profil_bio_feed_back_gemme.id}) }}">show</a>
+                    <a href="{{ path('app_profil_bio_feed_back_gemmes_edit', {'id': profil_bio_feed_back_gemme.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_bio_feed_back_gemmes_new') }}">Create new</a>
+{% endblock %}

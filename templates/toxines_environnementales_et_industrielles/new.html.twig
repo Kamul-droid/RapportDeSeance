@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ToxinesEnvironnementalesEtIndustrielles{% endblock %}
+
+{% block body %}
+    <h1>Create new ToxinesEnvironnementalesEtIndustrielles</h1>
+
+    {{ include('toxines_environnementales_et_industrielles/_form.html.twig') }}
+
+    <a href="{{ path('app_toxines_environnementales_et_industrielles_index') }}">back to list</a>
+{% endblock %}

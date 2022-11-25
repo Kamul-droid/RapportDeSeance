@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Toxines Environnementales Et Industrielles{% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> Toxines Environnementales Et Industrielles </div>{% endblock %}
+{% block body %}
+<table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for toxines_environnementales_et_industrielle in toxines_environnementales_et_industrielles %}
+            <tr>
+                <td>{{ toxines_environnementales_et_industrielle.id }}</td>
+                <td>{{ toxines_environnementales_et_industrielle.nom }}</td>
+                <td>
+                    <a href="{{ path('app_toxines_environnementales_et_industrielles_show', {'id': toxines_environnementales_et_industrielle.id}) }}">show</a>
+                    <a href="{{ path('app_toxines_environnementales_et_industrielles_edit', {'id': toxines_environnementales_et_industrielle.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_toxines_environnementales_et_industrielles_new') }}">Ajouter Toxines </a></div>
+
+{% endblock %}

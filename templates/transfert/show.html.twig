@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Transfert{% endblock %}
+
+{% block body %}
+    <h1>Transfert</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ transfert.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ transfert.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_transfert_index') }}">back to list</a>
+
+    <a href="{{ path('app_transfert_edit', {'id': transfert.id}) }}">edit</a>
+
+    {{ include('transfert/_delete_form.html.twig') }}
+{% endblock %}

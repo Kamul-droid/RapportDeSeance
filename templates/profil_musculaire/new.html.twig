@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilMusculaire{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilMusculaire</h1>
+
+    {{ include('profil_musculaire/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_musculaire_index') }}">back to list</a>
+{% endblock %}

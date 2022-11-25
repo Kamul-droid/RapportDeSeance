@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit AcidesAmines{% endblock %}
+
+{% block body %}
+    <h1>Edit AcidesAmines</h1>
+
+    {{ include('acides_amines/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_acides_amines_index') }}">back to list</a>
+
+    {{ include('acides_amines/_delete_form.html.twig') }}
+{% endblock %}

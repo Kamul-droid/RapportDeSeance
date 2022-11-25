@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit AnimauxFamilles{% endblock %}
+
+{% block body %}
+    <h1>Edit AnimauxFamilles</h1>
+
+    {{ include('animaux_familles/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_animaux_familles_index') }}">back to list</a>
+
+    {{ include('animaux_familles/_delete_form.html.twig') }}
+{% endblock %}

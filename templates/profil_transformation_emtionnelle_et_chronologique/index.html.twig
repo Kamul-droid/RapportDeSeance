@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilTransformationEmtionnelleEtChronologique index{% endblock %}
+
+{% block body %}
+    <h1>ProfilTransformationEmtionnelleEtChronologique index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Choix_de_voies</th>
+                <th>Facteurs_de_stress_emotionnel</th>
+                <th>Facteurs_de_stress_conflictuel</th>
+                <th>Choix_de_feedback</th>
+                <th>Choix_solution</th>
+                <th>Facteurs_de_stress_relationnel</th>
+                <th>Chronologie_de_facteurs</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_transformation_emtionnelle_et_chronologique in profil_transformation_emtionnelle_et_chronologiques %}
+            <tr>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.id }}</td>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.choixDeVoies }}</td>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.facteursDeStressEmotionnel }}</td>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.facteursDeStressConflictuel }}</td>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.choixDeFeedback }}</td>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.choixSolution }}</td>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.facteursDeStressRelationnel }}</td>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.chronologieDeFacteurs }}</td>
+                <td>
+                    <a href="{{ path('app_profil_transformation_emtionnelle_et_chronologique_show', {'id': profil_transformation_emtionnelle_et_chronologique.id}) }}">show</a>
+                    <a href="{{ path('app_profil_transformation_emtionnelle_et_chronologique_edit', {'id': profil_transformation_emtionnelle_et_chronologique.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_transformation_emtionnelle_et_chronologique_new') }}">Create new</a>
+{% endblock %}

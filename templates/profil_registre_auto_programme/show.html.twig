@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilRegistreAutoProgramme{% endblock %}
+
+{% block body %}
+    <h1>ProfilRegistreAutoProgramme</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_registre_auto_programme.id }}</td>
+            </tr>
+            <tr>
+                <th>Registre_susceptibilite</th>
+                <td>{{ profil_registre_auto_programme.registreSusceptibilite }}</td>
+            </tr>
+            <tr>
+                <th>Transfert</th>
+                <td>{{ profil_registre_auto_programme.transfert }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_registre_auto_programme_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_registre_auto_programme_edit', {'id': profil_registre_auto_programme.id}) }}">edit</a>
+
+    {{ include('profil_registre_auto_programme/_delete_form.html.twig') }}
+{% endblock %}

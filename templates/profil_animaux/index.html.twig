@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilAnimaux index{% endblock %}
+
+{% block body %}
+    <h1>ProfilAnimaux index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Animaux_familles</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_animaux in profil_animauxes %}
+            <tr>
+                <td>{{ profil_animaux.id }}</td>
+                <td>{{ profil_animaux.animauxFamilles }}</td>
+                <td>
+                    <a href="{{ path('app_profil_animaux_show', {'id': profil_animaux.id}) }}">show</a>
+                    <a href="{{ path('app_profil_animaux_edit', {'id': profil_animaux.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_animaux_new') }}">Create new</a>
+{% endblock %}

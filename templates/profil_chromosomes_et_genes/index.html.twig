@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilChromosomesEtGenes index{% endblock %}
+
+{% block body %}
+    <h1>ProfilChromosomesEtGenes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Evaluation_des_chromosomes</th>
+                <th>Evaluation_des_genes</th>
+                <th>Auto_feedback_pour_celle_Comm</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_chromosomes_et_gene in profil_chromosomes_et_genes %}
+            <tr>
+                <td>{{ profil_chromosomes_et_gene.id }}</td>
+                <td>{{ profil_chromosomes_et_gene.evaluationDesChromosomes }}</td>
+                <td>{{ profil_chromosomes_et_gene.evaluationDesGenes }}</td>
+                <td>{{ profil_chromosomes_et_gene.autoFeedbackPourCelleComm }}</td>
+                <td>
+                    <a href="{{ path('app_profil_chromosomes_et_genes_show', {'id': profil_chromosomes_et_gene.id}) }}">show</a>
+                    <a href="{{ path('app_profil_chromosomes_et_genes_edit', {'id': profil_chromosomes_et_gene.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_chromosomes_et_genes_new') }}">Create new</a>
+{% endblock %}

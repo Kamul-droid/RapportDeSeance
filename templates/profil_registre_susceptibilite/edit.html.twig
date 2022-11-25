@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilRegistreSusceptibilite{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilRegistreSusceptibilite</h1>
+
+    {{ include('profil_registre_susceptibilite/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_registre_susceptibilite_index') }}">back to list</a>
+
+    {{ include('profil_registre_susceptibilite/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilCellCom{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilCellCom</h1>
+
+    {{ include('profil_cell_com/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_cell_com_index') }}">back to list</a>
+{% endblock %}

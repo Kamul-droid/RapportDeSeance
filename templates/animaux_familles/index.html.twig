@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Animaux Familles{% endblock %}
+
+
+{% block monTitre %}<div class="fst-italic">Animaux Familles</div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for animaux_famille in animaux_familles %}
+            <tr>
+                <td>{{ animaux_famille.id }}</td>
+                <td>{{ animaux_famille.nom }}</td>
+                <td>
+                    <a href="{{ path('app_animaux_familles_show', {'id': animaux_famille.id}) }}">show</a>
+                    <a href="{{ path('app_animaux_familles_edit', {'id': animaux_famille.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_animaux_familles_new') }}">Ajouter Meridien</a></div>
+{% endblock %}

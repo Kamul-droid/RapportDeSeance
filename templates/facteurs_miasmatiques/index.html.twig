@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FacteursMiasmatiques index{% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> Facteurs Miasmatiques  </div>{% endblock %}
+{% block body %}
+
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facteurs_miasmatique in facteurs_miasmatiques %}
+            <tr>
+                <td>{{ facteurs_miasmatique.id }}</td>
+                <td>{{ facteurs_miasmatique.nom }}</td>
+                <td>
+                    <a href="{{ path('app_facteurs_miasmatiques_show', {'id': facteurs_miasmatique.id}) }}">show</a>
+                    <a href="{{ path('app_facteurs_miasmatiques_edit', {'id': facteurs_miasmatique.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_facteurs_miasmatiques_new') }}">Create new</a></div>
+{% endblock %}

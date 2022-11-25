@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Facteurs De Stress Relationnel{% endblock %}
+
+
+{% block monTitre %}<div class="fst-italic"> Facteurs De Stress Relationnel </div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facteurs_de_stress_relationnel in facteurs_de_stress_relationnels %}
+            <tr>
+                <td>{{ facteurs_de_stress_relationnel.id }}</td>
+                <td>{{ facteurs_de_stress_relationnel.nom }}</td>
+                <td>
+                    <a href="{{ path('app_facteurs_de_stress_relationnel_show', {'id': facteurs_de_stress_relationnel.id}) }}">show</a>
+                    <a href="{{ path('app_facteurs_de_stress_relationnel_edit', {'id': facteurs_de_stress_relationnel.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_facteurs_de_stress_relationnel_new') }}">Ajouter Choix Solution</a></div>
+{% endblock %}

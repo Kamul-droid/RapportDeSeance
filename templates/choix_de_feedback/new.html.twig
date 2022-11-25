@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ChoixDeFeedback{% endblock %}
+
+{% block body %}
+    <h1>Create new ChoixDeFeedback</h1>
+
+    {{ include('choix_de_feedback/_form.html.twig') }}
+
+    <a href="{{ path('app_choix_de_feedback_index') }}">back to list</a>
+{% endblock %}

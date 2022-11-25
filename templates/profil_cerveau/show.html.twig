@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilCerveau{% endblock %}
+
+{% block body %}
+    <h1>ProfilCerveau</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_cerveau.id }}</td>
+            </tr>
+            <tr>
+                <th>Reglage_ondes_cerebrales</th>
+                <td>{{ profil_cerveau.reglageOndesCerebrales }}</td>
+            </tr>
+            <tr>
+                <th>ADD_</th>
+                <td>{{ profil_cerveau.ADD }}</td>
+            </tr>
+            <tr>
+                <th>DHDA</th>
+                <td>{{ profil_cerveau.DHDA }}</td>
+            </tr>
+            <tr>
+                <th>Equilibre_harmonique_cerveau_gauche_cerveau_droit</th>
+                <td>{{ profil_cerveau.equilibreHarmoniqueCerveauGaucheCerveauDroit }}</td>
+            </tr>
+            <tr>
+                <th>Choix_item</th>
+                <td>{{ profil_cerveau.choixItem }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_cerveau_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_cerveau_edit', {'id': profil_cerveau.id}) }}">edit</a>
+
+    {{ include('profil_cerveau/_delete_form.html.twig') }}
+{% endblock %}

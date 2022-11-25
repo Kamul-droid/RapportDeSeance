@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilCouleursChakras{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilCouleursChakras</h1>
+
+    {{ include('profil_couleurs_chakras/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_couleurs_chakras_index') }}">back to list</a>
+
+    {{ include('profil_couleurs_chakras/_delete_form.html.twig') }}
+{% endblock %}

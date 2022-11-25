@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilDigestifs{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilDigestifs</h1>
+
+    {{ include('profil_digestifs/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_digestifs_index') }}">back to list</a>
+{% endblock %}

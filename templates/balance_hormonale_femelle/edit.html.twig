@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit BalanceHormonaleFemelle{% endblock %}
+
+{% block body %}
+    <h1>Edit BalanceHormonaleFemelle</h1>
+
+    {{ include('balance_hormonale_femelle/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_balance_hormonale_femelle_index') }}">back to list</a>
+
+    {{ include('balance_hormonale_femelle/_delete_form.html.twig') }}
+{% endblock %}

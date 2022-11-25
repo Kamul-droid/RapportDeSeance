@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilAnimaux{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilAnimaux</h1>
+
+    {{ include('profil_animaux/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_animaux_index') }}">back to list</a>
+
+    {{ include('profil_animaux/_delete_form.html.twig') }}
+{% endblock %}

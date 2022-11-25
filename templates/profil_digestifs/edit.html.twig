@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilDigestifs{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilDigestifs</h1>
+
+    {{ include('profil_digestifs/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_digestifs_index') }}">back to list</a>
+
+    {{ include('profil_digestifs/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,33 @@
+
+{% block _fiche_client_acupuncture_widget %}
+
+    <p> Vous pouvez ajouter plusieurs meridiens à la fois </p>
+    {{ form_widget(form) }}
+     <div class="form-group">
+     <button type="button" id="add-acupuncture" class="btn btn-primary"> Ajouter nouveau meridien</button>
+     </div>
+{% endblock %}
+
+{% block _fiche_client_acupuncture_entry_row %}
+    {{ form_widget(form) }}
+{% endblock %}
+
+
+{% block _fiche_client_acupuncture_entry_widget %}
+    <div class="form-group" id="block_{{form.vars.id}}">
+        <div class="row">
+            <div class="col-10">
+                {{form_widget(form)}}
+            </div>
+{#            <div class="col-6">#}
+{#                {{form_widget(form.feedback)}}#}
+{#            </div>#}
+{#            <div class="col-12">#}
+{#                {{form_widget(form.commentaire)}}#}
+{#            </div>#}
+            <div class="col-2">
+                <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger ">X</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

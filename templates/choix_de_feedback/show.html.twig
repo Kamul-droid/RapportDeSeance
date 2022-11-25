@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ChoixDeFeedback{% endblock %}
+
+{% block body %}
+    <h1>ChoixDeFeedback</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ choix_de_feedback.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ choix_de_feedback.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_choix_de_feedback_index') }}">back to list</a>
+
+    <a href="{{ path('app_choix_de_feedback_edit', {'id': choix_de_feedback.id}) }}">edit</a>
+
+    {{ include('choix_de_feedback/_delete_form.html.twig') }}
+{% endblock %}

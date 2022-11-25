@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilRifeSimili{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilRifeSimili</h1>
+
+    {{ include('profil_rife_simili/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_rife_simili_index') }}">back to list</a>
+{% endblock %}

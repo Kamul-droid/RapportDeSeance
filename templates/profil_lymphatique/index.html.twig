@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilLymphatique index{% endblock %}
+
+{% block body %}
+    <h1>ProfilLymphatique index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Transfert</th>
+                <th>Choix_bio_specifique</th>
+                <th>Choix_items</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_lymphatique in profil_lymphatiques %}
+            <tr>
+                <td>{{ profil_lymphatique.id }}</td>
+                <td>{{ profil_lymphatique.transfert }}</td>
+                <td>{{ profil_lymphatique.choixBioSpecifique }}</td>
+                <td>{{ profil_lymphatique.choixItems }}</td>
+                <td>
+                    <a href="{{ path('app_profil_lymphatique_show', {'id': profil_lymphatique.id}) }}">show</a>
+                    <a href="{{ path('app_profil_lymphatique_edit', {'id': profil_lymphatique.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_lymphatique_new') }}">Create new</a>
+{% endblock %}

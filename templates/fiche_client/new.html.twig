@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FicheClient{% endblock %}
+
+{% form_theme form _self %}
+{% block body %}
+    <h1>Create new FicheClient</h1>
+    <section class="container">
+        <div class="container">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+            {{ form_end(form) }}
+        </div>
+        <div>
+            <button class="btn">
+                <a href="{{ path('app_fiche_client_index') }}">back to list</a>
+            </button>
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block _fiche_client_acupuncture_widget %}
+
+    <p> Vous pouvez ajouter plusieurs meridiens à la fois </p>
+    {{ form_widget(form) }}
+    <div class="form-group">
+        <button type="button" id="add-acupuncture" class="btn btn-primary"> Ajouter nouveau meridien</button>
+    </div>
+{% endblock %}
+
+{% block _fiche_client_acupuncture_entry_row %}
+    {{ form_widget(form) }}
+{% endblock %}
+
+
+{% block _fiche_client_acupuncture_entry_widget %}
+    <div class="form-group" id="block_{{form.vars.id}}">
+        <div class="row">
+            <div class="col-10">
+                <div class="col-6">
+                {{form_widget(form.meridien)}}
+                </div>
+                        <div class="col-6">
+                            {{form_widget(form.feedback)}}
+                        </div>
+                        <div class="col-12">
+                            {{form_widget(form.commentaire)}}
+                        </div>
+            </div>
+            <div class="col-2">
+                <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger ">X</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block javascripts%}
+
+    <script>
+
+        $('#add-acupuncture').click(function () {
+            //Je récupère le numéro des futurs champs que je vais créer 
+            const index = $('#fiche_client_acupuncture div.form-group').length;
+
+            //Je recupère le prototype des entrées
+            const  tmpl=$('#fiche_client_acupuncture').data('prototype').replace(/_name__/g,index);
+             //J'injecte ce code au sein de la div
+            $('#fiche_client_acupuncture').append(tmpl);
+            deleteButtons();
+        });
+        
+        function deleteButtons() {
+            $('button[data-action = "delete"]').click(function () {
+                const target = this.dataset.target;
+                $(target).remove();
+
+            })
+        }
+    </script>
+{% endblock %}
+
+

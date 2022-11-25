@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilTransformationEmtionnelleEtChronologique{% endblock %}
+
+{% block body %}
+    <h1>ProfilTransformationEmtionnelleEtChronologique</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.id }}</td>
+            </tr>
+            <tr>
+                <th>Choix_de_voies</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.choixDeVoies }}</td>
+            </tr>
+            <tr>
+                <th>Facteurs_de_stress_emotionnel</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.facteursDeStressEmotionnel }}</td>
+            </tr>
+            <tr>
+                <th>Facteurs_de_stress_conflictuel</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.facteursDeStressConflictuel }}</td>
+            </tr>
+            <tr>
+                <th>Choix_de_feedback</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.choixDeFeedback }}</td>
+            </tr>
+            <tr>
+                <th>Choix_solution</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.choixSolution }}</td>
+            </tr>
+            <tr>
+                <th>Facteurs_de_stress_relationnel</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.facteursDeStressRelationnel }}</td>
+            </tr>
+            <tr>
+                <th>Chronologie_de_facteurs</th>
+                <td>{{ profil_transformation_emtionnelle_et_chronologique.chronologieDeFacteurs }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_transformation_emtionnelle_et_chronologique_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_transformation_emtionnelle_et_chronologique_edit', {'id': profil_transformation_emtionnelle_et_chronologique.id}) }}">edit</a>
+
+    {{ include('profil_transformation_emtionnelle_et_chronologique/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilSinusGorge{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilSinusGorge</h1>
+
+    {{ include('profil_sinus_gorge/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_sinus_gorge_index') }}">back to list</a>
+
+    {{ include('profil_sinus_gorge/_delete_form.html.twig') }}
+{% endblock %}

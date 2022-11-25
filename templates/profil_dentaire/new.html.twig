@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilDentaire{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilDentaire</h1>
+
+    {{ include('profil_dentaire/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_dentaire_index') }}">back to list</a>
+{% endblock %}

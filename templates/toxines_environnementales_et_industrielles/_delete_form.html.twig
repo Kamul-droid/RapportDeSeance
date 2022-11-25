@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('app_toxines_environnementales_et_industrielles_delete', {'id': toxines_environnementales_et_industrielle.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ toxines_environnementales_et_industrielle.id) }}">
+    <button class="btn">Delete</button>
+</form>

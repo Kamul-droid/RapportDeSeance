@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilChromosomesEtGenes{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilChromosomesEtGenes</h1>
+
+    {{ include('profil_chromosomes_et_genes/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_chromosomes_et_genes_index') }}">back to list</a>
+{% endblock %}

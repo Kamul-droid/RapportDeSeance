@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilCerveau{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilCerveau</h1>
+
+    {{ include('profil_cerveau/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_cerveau_index') }}">back to list</a>
+{% endblock %}

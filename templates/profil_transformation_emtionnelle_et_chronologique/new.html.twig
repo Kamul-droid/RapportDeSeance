@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilTransformationEmtionnelleEtChronologique{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilTransformationEmtionnelleEtChronologique</h1>
+
+    {{ include('profil_transformation_emtionnelle_et_chronologique/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_transformation_emtionnelle_et_chronologique_index') }}">back to list</a>
+{% endblock %}

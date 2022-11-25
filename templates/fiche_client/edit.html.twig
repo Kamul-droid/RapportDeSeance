@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit FicheClient{% endblock %}
+
+{% block body %}
+    <h1>Edit FicheClient</h1>
+
+    {{ include('fiche_client/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_fiche_client_index') }}">back to list</a>
+
+    {{ include('fiche_client/_delete_form.html.twig') }}
+{% endblock %}

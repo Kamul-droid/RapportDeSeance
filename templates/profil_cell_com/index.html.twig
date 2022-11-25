@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilCellCom index{% endblock %}
+
+{% block body %}
+    <h1>ProfilCellCom index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Evaluation_des_chromosomes</th>
+                <th>Evaluation_des_genes</th>
+                <th>Auto_feedback_pour_cell_comm</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_cell_com in profil_cell_coms %}
+            <tr>
+                <td>{{ profil_cell_com.id }}</td>
+                <td>{{ profil_cell_com.evaluationDesChromosomes }}</td>
+                <td>{{ profil_cell_com.evaluationDesGenes }}</td>
+                <td>{{ profil_cell_com.autoFeedbackPourCellComm }}</td>
+                <td>
+                    <a href="{{ path('app_profil_cell_com_show', {'id': profil_cell_com.id}) }}">show</a>
+                    <a href="{{ path('app_profil_cell_com_edit', {'id': profil_cell_com.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_cell_com_new') }}">Create new</a>
+{% endblock %}

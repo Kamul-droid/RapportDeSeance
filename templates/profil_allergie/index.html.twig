@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilAllergie index{% endblock %}
+
+{% block body %}
+    <h1>ProfilAllergie index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Commentaire</th>
+                <th>Nom_item</th>
+                <th>Feedbacksupplementaire</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_allergie in profil_allergies %}
+            <tr>
+                <td>{{ profil_allergie.id }}</td>
+                <td>{{ profil_allergie.commentaire }}</td>
+                <td>{{ profil_allergie.nomItem }}</td>
+                <td>{{ profil_allergie.feedbacksupplementaire }}</td>
+                <td>
+                    <a href="{{ path('app_profil_allergie_show', {'id': profil_allergie.id}) }}">show</a>
+                    <a href="{{ path('app_profil_allergie_edit', {'id': profil_allergie.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_allergie_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Balance Hormonale Male {% endblock %}
+
+
+{% block monTitre %}<div class="fst-italic">Balance Hormonale Male</div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for balance_hormonale_male in balance_hormonale_males %}
+            <tr>
+                <td>{{ balance_hormonale_male.id }}</td>
+                <td>{{ balance_hormonale_male.nom }}</td>
+                <td>
+                    <a href="{{ path('app_balance_hormonale_male_show', {'id': balance_hormonale_male.id}) }}">show</a>
+                    <a href="{{ path('app_balance_hormonale_male_edit', {'id': balance_hormonale_male.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_balance_hormonale_male_new') }}">Ajouter Balance Hormonale Male</a></div>
+
+{% endblock %}

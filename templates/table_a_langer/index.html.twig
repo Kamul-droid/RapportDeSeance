@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Table A Langer{% endblock %}
+
+{% block monTitre %}<div class="fst-italic">Table A Langer</div>{% endblock %}
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for table_a_langer in table_a_langers %}
+            <tr>
+                <td>{{ table_a_langer.id }}</td>
+                <td>{{ table_a_langer.nom }}</td>
+                <td>
+                    <a href="{{ path('app_table_a_langer_show', {'id': table_a_langer.id}) }}">show</a>
+                    <a href="{{ path('app_table_a_langer_edit', {'id': table_a_langer.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_table_a_langer_new') }}">Ajouter Meridien</a></div>
+{% endblock %}

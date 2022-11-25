@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilNeuroEmotionnel{% endblock %}
+
+{% block body %}
+    <h1>ProfilNeuroEmotionnel</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_neuro_emotionnel.id }}</td>
+            </tr>
+            <tr>
+                <th>Conseil_evaluation_pour_auto_evaluation</th>
+                <td>{{ profil_neuro_emotionnel.conseilEvaluationPourAutoEvaluation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_neuro_emotionnel_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_neuro_emotionnel_edit', {'id': profil_neuro_emotionnel.id}) }}">edit</a>
+
+    {{ include('profil_neuro_emotionnel/_delete_form.html.twig') }}
+{% endblock %}

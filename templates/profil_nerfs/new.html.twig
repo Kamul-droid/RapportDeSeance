@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilNerfs{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilNerfs</h1>
+
+    {{ include('profil_nerfs/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_nerfs_index') }}">back to list</a>
+{% endblock %}

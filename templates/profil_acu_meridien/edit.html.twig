@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilAcuMeridien{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilAcuMeridien</h1>
+
+    {{ include('profil_acu_meridien/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_acu_meridien_index') }}">back to list</a>
+
+    {{ include('profil_acu_meridien/_delete_form.html.twig') }}
+{% endblock %}

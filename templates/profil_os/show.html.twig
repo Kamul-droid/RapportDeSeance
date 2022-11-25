@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilOs{% endblock %}
+
+{% block body %}
+    <h1>ProfilOs</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_o.id }}</td>
+            </tr>
+            <tr>
+                <th>Transfert</th>
+                <td>{{ profil_o.transfert }}</td>
+            </tr>
+            <tr>
+                <th>ChoixBioSpecifique</th>
+                <td>{{ profil_o.choixBioSpecifique }}</td>
+            </tr>
+            <tr>
+                <th>Reduction</th>
+                <td>{{ profil_o.reduction }}</td>
+            </tr>
+            <tr>
+                <th>Nom_os</th>
+                <td>{{ profil_o.nomOs }}</td>
+            </tr>
+            <tr>
+                <th>Liste_items</th>
+                <td>{{ profil_o.listeItems }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_os_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_os_edit', {'id': profil_o.id}) }}">edit</a>
+
+    {{ include('profil_os/_delete_form.html.twig') }}
+{% endblock %}

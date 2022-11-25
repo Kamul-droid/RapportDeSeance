@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilCirculationCoeur{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilCirculationCoeur</h1>
+
+    {{ include('profil_circulation_coeur/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_circulation_coeur_index') }}">back to list</a>
+
+    {{ include('profil_circulation_coeur/_delete_form.html.twig') }}
+{% endblock %}

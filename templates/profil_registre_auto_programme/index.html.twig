@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilRegistreAutoProgramme index{% endblock %}
+
+{% block body %}
+    <h1>ProfilRegistreAutoProgramme index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Registre_susceptibilite</th>
+                <th>Transfert</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_registre_auto_programme in profil_registre_auto_programmes %}
+            <tr>
+                <td>{{ profil_registre_auto_programme.id }}</td>
+                <td>{{ profil_registre_auto_programme.registreSusceptibilite }}</td>
+                <td>{{ profil_registre_auto_programme.transfert }}</td>
+                <td>
+                    <a href="{{ path('app_profil_registre_auto_programme_show', {'id': profil_registre_auto_programme.id}) }}">show</a>
+                    <a href="{{ path('app_profil_registre_auto_programme_edit', {'id': profil_registre_auto_programme.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_registre_auto_programme_new') }}">Create new</a>
+{% endblock %}

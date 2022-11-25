@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilDimensionnel{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilDimensionnel</h1>
+
+    {{ include('profil_dimensionnel/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_dimensionnel_index') }}">back to list</a>
+
+    {{ include('profil_dimensionnel/_delete_form.html.twig') }}
+{% endblock %}

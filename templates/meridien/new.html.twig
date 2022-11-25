@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Meridien{% endblock %}
+
+{% block body %}
+    <h1>Create new Meridien</h1>
+
+    {{ include('meridien/_form.html.twig') }}
+
+    <a href="{{ path('app_meridien_index') }}">back to list</a>
+{% endblock %}

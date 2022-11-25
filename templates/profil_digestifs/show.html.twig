@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilDigestifs{% endblock %}
+
+{% block body %}
+    <h1>ProfilDigestifs</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_digestif.id }}</td>
+            </tr>
+            <tr>
+                <th>Transfert</th>
+                <td>{{ profil_digestif.transfert }}</td>
+            </tr>
+            <tr>
+                <th>Choix_bio_specifique</th>
+                <td>{{ profil_digestif.choixBioSpecifique }}</td>
+            </tr>
+            <tr>
+                <th>Choix_items</th>
+                <td>{{ profil_digestif.choixItems }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_digestifs_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_digestifs_edit', {'id': profil_digestif.id}) }}">edit</a>
+
+    {{ include('profil_digestifs/_delete_form.html.twig') }}
+{% endblock %}

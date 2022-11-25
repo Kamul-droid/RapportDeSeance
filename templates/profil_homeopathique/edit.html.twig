@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProfilHomeopathique{% endblock %}
+
+{% block body %}
+    <h1>Edit ProfilHomeopathique</h1>
+
+    {{ include('profil_homeopathique/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_profil_homeopathique_index') }}">back to list</a>
+
+    {{ include('profil_homeopathique/_delete_form.html.twig') }}
+{% endblock %}

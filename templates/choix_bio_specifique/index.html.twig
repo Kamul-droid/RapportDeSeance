@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ChoixBioSpecifique index{% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> Choix Bio Specifique  </div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for choix_bio_specifique in choix_bio_specifiques %}
+            <tr>
+                <td>{{ choix_bio_specifique.id }}</td>
+                <td>{{ choix_bio_specifique.nom }}</td>
+                <td>
+                    <a href="{{ path('app_choix_bio_specifique_show', {'id': choix_bio_specifique.id}) }}">show</a>
+                    <a href="{{ path('app_choix_bio_specifique_edit', {'id': choix_bio_specifique.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_choix_bio_specifique_new') }}">Create new</a></div>
+{% endblock %}

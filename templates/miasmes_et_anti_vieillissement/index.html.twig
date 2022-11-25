@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MiasmesEtAntiVieillissement index{% endblock %}
+
+{% block body %}
+    <h1>MiasmesEtAntiVieillissement index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Facteurs_miasmatiques</th>
+                <th>Facteurs_de_stress</th>
+                <th>Reaction_age</th>
+                <th>Facteurs_generaux</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for miasmes_et_anti_vieillissement in miasmes_et_anti_vieillissements %}
+            <tr>
+                <td>{{ miasmes_et_anti_vieillissement.id }}</td>
+                <td>{{ miasmes_et_anti_vieillissement.facteursMiasmatiques }}</td>
+                <td>{{ miasmes_et_anti_vieillissement.facteursDeStress }}</td>
+                <td>{{ miasmes_et_anti_vieillissement.reactionAge }}</td>
+                <td>{{ miasmes_et_anti_vieillissement.facteursGeneraux }}</td>
+                <td>
+                    <a href="{{ path('app_miasmes_et_anti_vieillissement_show', {'id': miasmes_et_anti_vieillissement.id}) }}">show</a>
+                    <a href="{{ path('app_miasmes_et_anti_vieillissement_edit', {'id': miasmes_et_anti_vieillissement.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_miasmes_et_anti_vieillissement_new') }}">Create new</a>
+{% endblock %}

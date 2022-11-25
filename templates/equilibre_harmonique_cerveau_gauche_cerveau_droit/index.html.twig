@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EquilibreHarmoniqueCerveauGaucheCerveauDroit {% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> Equilibre Harmonique Cerveau Gauche Cerveau Droit </div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equilibre_harmonique_cerveau_gauche_cerveau_droit in equilibre_harmonique_cerveau_gauche_cerveau_droits %}
+            <tr>
+                <td>{{ equilibre_harmonique_cerveau_gauche_cerveau_droit.id }}</td>
+                <td>{{ equilibre_harmonique_cerveau_gauche_cerveau_droit.nom }}</td>
+                <td>
+                    <a href="{{ path('app_equilibre_harmonique_cerveau_gauche_cerveau_droit_show', {'id': equilibre_harmonique_cerveau_gauche_cerveau_droit.id}) }}">show</a>
+                    <a href="{{ path('app_equilibre_harmonique_cerveau_gauche_cerveau_droit_edit', {'id': equilibre_harmonique_cerveau_gauche_cerveau_droit.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_equilibre_harmonique_cerveau_gauche_cerveau_droit_new') }}">Ajouter Equilibre Harmonique Cerveau Gauche Cerveau Droit </a></div>
+{% endblock %}

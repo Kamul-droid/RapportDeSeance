@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New EquilibreHarmoniqueCerveauGaucheCerveauDroit{% endblock %}
+
+{% block body %}
+    <h1>Create new EquilibreHarmoniqueCerveauGaucheCerveauDroit</h1>
+
+    {{ include('equilibre_harmonique_cerveau_gauche_cerveau_droit/_form.html.twig') }}
+
+    <a href="{{ path('app_equilibre_harmonique_cerveau_gauche_cerveau_droit_index') }}">back to list</a>
+{% endblock %}

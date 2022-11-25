@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit SystemeDOrganes{% endblock %}
+
+{% block body %}
+    <h1>Edit SystemeDOrganes</h1>
+
+    {{ include('systeme_d_organes/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_systeme_d_organes_index') }}">back to list</a>
+
+    {{ include('systeme_d_organes/_delete_form.html.twig') }}
+{% endblock %}

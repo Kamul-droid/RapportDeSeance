@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FicheClient{% endblock %}
+
+{% block body %}
+    <h1>FicheClient</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fiche_client.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ fiche_client.nom }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ fiche_client.date ? fiche_client.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_fiche_client_index') }}">back to list</a>
+
+    <a href="{{ path('app_fiche_client_edit', {'id': fiche_client.id}) }}">edit</a>
+
+    {{ include('fiche_client/_delete_form.html.twig') }}
+{% endblock %}

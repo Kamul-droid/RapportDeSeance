@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilCouleursChakras{% endblock %}
+
+{% block body %}
+    <h1>ProfilCouleursChakras</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_couleurs_chakra.id }}</td>
+            </tr>
+            <tr>
+                <th>Chakra</th>
+                <td>{{ profil_couleurs_chakra.chakra }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_couleurs_chakras_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_couleurs_chakras_edit', {'id': profil_couleurs_chakra.id}) }}">edit</a>
+
+    {{ include('profil_couleurs_chakras/_delete_form.html.twig') }}
+{% endblock %}

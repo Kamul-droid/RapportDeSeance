@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit FacteursDeStress{% endblock %}
+
+{% block body %}
+    <h1>Edit FacteursDeStress</h1>
+
+    {{ include('facteurs_de_stress/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_facteurs_de_stress_index') }}">back to list</a>
+
+    {{ include('facteurs_de_stress/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit TableALanger{% endblock %}
+
+{% block body %}
+    <h1>Edit TableALanger</h1>
+
+    {{ include('table_a_langer/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_table_a_langer_index') }}">back to list</a>
+
+    {{ include('table_a_langer/_delete_form.html.twig') }}
+{% endblock %}

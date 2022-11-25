@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New RegistreDeSusceptibilite{% endblock %}
+
+{% block body %}
+    <h1>Create new RegistreDeSusceptibilite</h1>
+
+    {{ include('registre_de_susceptibilite/_form.html.twig') }}
+
+    <a href="{{ path('app_registre_de_susceptibilite_index') }}">back to list</a>
+{% endblock %}

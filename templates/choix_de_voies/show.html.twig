@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ChoixDeVoies{% endblock %}
+
+{% block body %}
+    <h1>ChoixDeVoies</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ choix_de_voie.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ choix_de_voie.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_choix_de_voies_index') }}">back to list</a>
+
+    <a href="{{ path('app_choix_de_voies_edit', {'id': choix_de_voie.id}) }}">edit</a>
+
+    {{ include('choix_de_voies/_delete_form.html.twig') }}
+{% endblock %}

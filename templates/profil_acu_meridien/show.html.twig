@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilAcuMeridien{% endblock %}
+
+{% block body %}
+    <h1>ProfilAcuMeridien</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profil_acu_meridien.id }}</td>
+            </tr>
+            <tr>
+                <th>Meridien</th>
+                <td>{{ profil_acu_meridien.meridien }}</td>
+            </tr>
+            <tr>
+                <th>Feedback</th>
+                <td>{{ profil_acu_meridien.feedback }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ profil_acu_meridien.commentaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_acu_meridien_index') }}">back to list</a>
+
+    <a href="{{ path('app_profil_acu_meridien_edit', {'id': profil_acu_meridien.id}) }}">edit</a>
+
+    {{ include('profil_acu_meridien/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Susceptibilite{% endblock %}
+
+{% block body %}
+    <h1>Create new Susceptibilite</h1>
+
+    {{ include('susceptibilite/_form.html.twig') }}
+
+    <a href="{{ path('app_susceptibilite_index') }}">back to list</a>
+{% endblock %}

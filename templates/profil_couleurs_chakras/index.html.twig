@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilCouleursChakras {% endblock %}
+
+{% block monTitre %}<div class="fst-italic"> Chakras </div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Chakra</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_couleurs_chakra in profil_couleurs_chakras %}
+            <tr>
+                <td>{{ profil_couleurs_chakra.id }}</td>
+                <td>{{ profil_couleurs_chakra.chakra }}</td>
+                <td>
+                    <a href="{{ path('app_profil_couleurs_chakras_show', {'id': profil_couleurs_chakra.id}) }}">show</a>
+                    <a href="{{ path('app_profil_couleurs_chakras_edit', {'id': profil_couleurs_chakra.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_profil_couleurs_chakras_new') }}">Ajouter Chakras</a></div>
+
+{% endblock %}

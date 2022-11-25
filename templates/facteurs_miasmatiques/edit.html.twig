@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit FacteursMiasmatiques{% endblock %}
+
+{% block body %}
+    <h1>Edit FacteursMiasmatiques</h1>
+
+    {{ include('facteurs_miasmatiques/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_facteurs_miasmatiques_index') }}">back to list</a>
+
+    {{ include('facteurs_miasmatiques/_delete_form.html.twig') }}
+{% endblock %}

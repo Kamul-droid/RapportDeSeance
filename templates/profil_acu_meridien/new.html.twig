@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProfilAcuMeridien{% endblock %}
+
+{% block body %}
+    <h1>Create new ProfilAcuMeridien</h1>
+
+    {{ include('profil_acu_meridien/_form.html.twig') }}
+
+    <a href="{{ path('app_profil_acu_meridien_index') }}">back to list</a>
+{% endblock %}

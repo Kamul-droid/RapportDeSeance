@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vitamines {% endblock %}
+
+
+{% block monTitre %}<div class="fst-italic"> Vitamines </div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vitamine in vitamines %}
+            <tr>
+                <td>{{ vitamine.id }}</td>
+                <td>{{ vitamine.nom }}</td>
+                <td>
+                    <a href="{{ path('app_vitamines_show', {'id': vitamine.id}) }}">show</a>
+                    <a href="{{ path('app_vitamines_edit', {'id': vitamine.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_vitamines_new') }}">Ajouter Meridien</a></div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DetoxDuCorps{% endblock %}
+
+{% block body %}
+    <h1>DetoxDuCorps</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ detox_du_corp.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ detox_du_corp.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_detox_du_corps_index') }}">back to list</a>
+
+    <a href="{{ path('app_detox_du_corps_edit', {'id': detox_du_corp.id}) }}">edit</a>
+
+    {{ include('detox_du_corps/_delete_form.html.twig') }}
+{% endblock %}

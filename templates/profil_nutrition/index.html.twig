@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProfilNutrition index{% endblock %}
+
+{% block body %}
+    <h1>ProfilNutrition index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Mineraux</th>
+                <th>Acides_amines</th>
+                <th>Vitamines</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil_nutrition in profil_nutritions %}
+            <tr>
+                <td>{{ profil_nutrition.id }}</td>
+                <td>{{ profil_nutrition.mineraux }}</td>
+                <td>{{ profil_nutrition.acidesAmines }}</td>
+                <td>{{ profil_nutrition.vitamines }}</td>
+                <td>
+                    <a href="{{ path('app_profil_nutrition_show', {'id': profil_nutrition.id}) }}">show</a>
+                    <a href="{{ path('app_profil_nutrition_edit', {'id': profil_nutrition.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_nutrition_new') }}">Create new</a>
+{% endblock %}

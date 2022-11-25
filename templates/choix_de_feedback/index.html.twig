@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Choix De Feedback{% endblock %}
+
+
+{% block monTitre %}<div class="fst-italic"> Choix De Feedback </div>{% endblock %}
+
+{% block body %}
+    <table class="table-sm table-responsive col-md-4 offset-4 table-bordered mg border border-5 border-info rounded-5">
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for choix_de_feedback in choix_de_feedbacks %}
+            <tr>
+                <td>{{ choix_de_feedback.id }}</td>
+                <td>{{ choix_de_feedback.nom }}</td>
+                <td>
+                    <a href="{{ path('app_choix_de_feedback_show', {'id': choix_de_feedback.id}) }}">show</a>
+                    <a href="{{ path('app_choix_de_feedback_edit', {'id': choix_de_feedback.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center"><a class=" btn btn-warning" href="{{ path('app_choix_de_feedback_new') }}">Ajouter Choix De Feedback</a></div>
+
+{% endblock %}
