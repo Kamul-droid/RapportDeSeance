@@ -1,0 +1,168 @@
+<section class="small_pt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading_s2">
+                    <h5> Fiche Client</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="field_form form_style1 icon_form">
+
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            {{ form_start(form) }}
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-user"></i>
+                                    </span> {{ form_widget(form.name,{'attr':{'class':'form-control', 'placeholder':"Entrer votre nom *",'required':'required', 'id':'first-name'}}) }}
+
+
+                            </div>
+
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-user"></i>
+                                    </span> {{ form_widget(form.surname,{'attr':{'class':'form-control', 'placeholder':"Entrer votre prenom *",'required':'required', 'id':'prenom'}}) }}
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class=""></i>
+                                    </span> {{ form_widget(form.placeofbirth,{'attr':{'class':'form-control', 'placeholder':"Entrer votre lieu de naissance *",'required':'required', 'id':'first-name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class=""></i>
+                                        Date de naissance
+                                    </span> {{ form_widget(form.dateofbirth,{'attr':{'class':'form-control text-right', 'placeholder':"Entrer votre date de naissance *",'required':'required', 'id':'naissance'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-comments"></i>
+                                        Sexe 
+                                    </span> {{ form_widget(form.sex,{'attr':{'class':'form-control', 'placeholder':"Entrer votre addresse *",'rows':"5",'required':'required', 'id':'addresse'}}) }}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class=""></i>
+                                    Groupe Sanguin
+                                    </span> {{ form_widget(form.s_group,{'attr':{'class':'form-control text-right', 'placeholder':"Entrer votre groupe sanguin *",'required':'required', 'id':'first-name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class=""></i>
+                                    Dextérité
+                                    </span> {{ form_widget(form.hand,{'attr':{'class':'form-control text-right', 'placeholder':"Entrer votre groupe sanguin *",'required':'required', 'id':'first-name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class=""></i>
+                                        Profession
+                                    </span> {{ form_widget(form.work,{'attr':{'class':'form-control', 'placeholder':"Entrer votre profession *",'required':'required', 'id':'first-name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class=""></i>
+                                        Situation matrimoniale
+                                    </span> {{ form_widget(form.maried,{'attr':{'class':'form-control', 'placeholder':"Entrer votre situation familiale *",'required':'required', 'id':'first-name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class=""></i>
+                                        Nombre d'enfant 
+                                    </span> {{ form_widget(form.children,{'attr':{'class':'form-control', 'placeholder':"Entrer le nombre d'enfant que vous avez *",'required':'required', 'id':'first-name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-comments"></i>
+                                        Sexe des enfants 
+                                    </span> {{ form_widget(form.children_sex,{'attr':{'class':'form-control', 'placeholder':"Sexe des enfants ",'required':'required', 'id':'description','row':""}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-mobile"></i>
+                                        Téléphone 
+                                    </span> {{ form_widget(form.tel,{'attr':{'class':'form-control', 'placeholder':"Entrer votre No. de téléphone *",'required':'required', 'id':'tel'}}) }}
+
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-email"></i>
+                                        Email
+                                    </span> {{ form_widget(form.email,{'attr':{'class':'form-control', 'placeholder':"Entrer votre email*",'required':'required', 'id':'email'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-post"></i>
+                                        Code postal 
+                                    </span> {{ form_widget(form.postalcode,{'attr':{'class':'form-control', 'placeholder':"Entrer votre code postal *",'required':'required', 'id':'codePoste'}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-post"></i>
+                                        Addresse
+                                    </span> {{ form_widget(form.address,{'attr':{'class':'form-control', 'placeholder':"Entrer votre ville de résidence *",'required':'required', 'id':'pays'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-input">
+                                <span>
+                                        <i class="ti-post"></i>
+                                        Pays 
+                                    </span> {{ form_widget(form.country,{'attr':{'class':'form-control', 'placeholder':"Entrer votre pays *",'required':'required', 'id':'pays'}}) }}
+                            </div>
+                        </div>
+                       
+                        
+                        
+                       
+                         
+                        <div class="col-lg-12 form_style1 icon_form text-center">
+
+                            <button  class="btn btn-default" >{% trans %}Créer{% endtrans %}</button>
+                        </div>
+                        {{ form_end(form) }}
+                        
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

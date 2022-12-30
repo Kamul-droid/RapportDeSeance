@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HealthHistory index{% endblock %}
+
+{% block body %}
+    <h1>HealthHistory index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descript</th>
+                <th>Illness</th>
+                <th>Event</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for health_history in health_histories %}
+            <tr>
+                <td>{{ health_history.id }}</td>
+                <td>{{ health_history.descript }}</td>
+                <td>{{ health_history.illness }}</td>
+                <td>{{ health_history.event ? health_history.event|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_health_history_show', {'id': health_history.id}) }}">show</a>
+                    <a href="{{ path('app_health_history_edit', {'id': health_history.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_health_history_new') }}">Create new</a>
+{% endblock %}

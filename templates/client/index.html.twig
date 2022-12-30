@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client index{% endblock %}
+
+{% block body %}
+    <h1>Client index</h1>
+    <h2 class="btn-danger"> 
+        <a href="{{ path('app_quantareport_new') }}">Create report </a>
+    </h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Dateofbirth</th>
+                <th>Placeofbirth</th>
+                <th>S_group</th>
+                <th>Hand</th>
+                <th>Work</th>
+                <th>Tel</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Postalcode</th>
+                <th>Country</th>
+                <th>Sex</th>
+                <th>Children</th>
+                <th>Children_sex</th>
+                <th>Maried</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for client in clients %}
+            <tr>
+                <td>{{ client.id }}</td>
+                <td>{{ client.name }}</td>
+                <td>{{ client.surname }}</td>
+                <td>{{ client.dateofbirth ? client.dateofbirth|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ client.placeofbirth }}</td>
+                <td>{{ client.sGroup }}</td>
+                <td>{{ client.hand }}</td>
+                <td>{{ client.work }}</td>
+                <td>{{ client.tel }}</td>
+                <td>{{ client.email }}</td>
+                <td>{{ client.address }}</td>
+                <td>{{ client.postalcode }}</td>
+                <td>{{ client.country }}</td>
+                <td>{{ client.sex }}</td>
+                <td>{{ client.children }}</td>
+                <td>{{ client.childrenSex }}</td>
+                <td>{{ client.maried }}</td>
+                <td>
+                    <a href="{{ path('app_client_show', {'id': client.id}) }}">show</a>
+                    <a href="{{ path('app_client_edit', {'id': client.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="18">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_client_new') }}">Create new</a>
+{% endblock %}

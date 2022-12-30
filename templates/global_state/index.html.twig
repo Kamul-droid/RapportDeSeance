@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GlobalState index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="form-group col-lg-10">
+    <h1>GlobalState index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descript</th>
+                <th>Since</th>
+                <th>Duration</th>
+                <th>Observation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for global_state in global_states %}
+            <tr>
+                <td>{{ global_state.id }}</td>
+                <td>{{ global_state.descript }}</td>
+                <td>{{ global_state.since ? global_state.since|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ global_state.duration }}</td>
+                <td>{{ global_state.observation }}</td>
+                <td>
+                    <a href="{{ path('app_global_state_show', {'id': global_state.id}) }}">show</a>
+                    <a href="{{ path('app_global_state_edit', {'id': global_state.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_global_state_new') }}">Create new</a>
+
+</div>
+</div>
+        
+    {% endblock %}

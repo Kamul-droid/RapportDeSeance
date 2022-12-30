@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit GlobalDescription{% endblock %}
+
+{% block body %}
+    <h1>Edit GlobalDescription</h1>
+
+    {{ include('global_description/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_global_description_index') }}">back to list</a>
+
+    {{ include('global_description/_delete_form.html.twig') }}
+{% endblock %}

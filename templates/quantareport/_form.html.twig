@@ -1,0 +1,83 @@
+<div class="container">
+    {{ form_start(form) }}
+    <div class="form-group col-lg-12">
+
+        {{ form_widget(form.consult_method,{'attr':{'class':'form-control', 'placeholder':"Type de séance*",'required':'required', 'id':''}}) }} <br><br>
+        <div class="row  align-items-center">
+            <div class="class col-8">
+                {{ form_widget(form.client,{'attr':{'class':'form-control', 'placeholder':" Client*", 'id':''}}) }}
+    
+            </div>
+            <div class="class col-4 icon_box m-0" data-toggle ="tooltip" data-placement="right" title data-original-title="Ajoutez une nouvelle catégorie">
+                <a href="{{path('app_client_new')}}"> <i class=" ion-plus-circled"></i>Ajouter un client</a>
+    
+            </div>
+        </div>
+       <br>
+        <span class="rounded shadow-sm p-3 mb-5 bg-body h2"> Motif principal</span>
+        <br>
+        <div class="input-group-text">
+            <span> </span>
+            <br>
+            {{ form_widget(form.pobject,{'attr':{'class':'form-control', 'placeholder':"Indications principales *",'required':'required', 'id':''}}) }}
+            
+            
+            <span>nouveau motif</span>
+            <br> 
+            <a href="{{path('app_primary_object_new')}}"> <i class=" ion-plus-circled"></i>Ajouter un motif</a>
+            
+        </div>
+        
+        <br><br> 
+        <span class="rounded shadow-sm p-3 mb-5 bg-body h2"> Motif secondaire</span>
+        <div class="input-group-text">
+            <span> </span>
+            <br>
+            {{ form_widget(form.sobject,{'attr':{'class':'form-control', 'placeholder':"Indications principales *",'required':'required', 'id':''}}) }}
+            
+            
+            <span>nouveau motif</span>
+            <br> 
+            <a href="{{path('app_secondary_object_new')}}"> <i class=" ion-plus-circled"></i>Ajouter un motif</a>
+            
+        </div>
+        
+        
+        <br><br> 
+         {{ form_widget(form.gstate,{'attr':{'class':'form-control', 'placeholder':" *",'required':'required', 'id':''}}) }}
+        
+       <br><br> 
+        {{ form_widget(form.health,{'attr':{'class':'form-control', 'placeholder':" *",'required':'required', 'id':''}}) }}
+        <br>
+        <div class="input-group-text">
+            <span class="rounded shadow-sm p-3 mb-5 bg-body">Début de la séance </span> 
+            <br>{{ form_widget(form.started_at,{'attr':{'class':'form-control', 'placeholder':" *",'required':'required', 'id':''}}) }}
+            <span class="rounded shadow-sm p-3 mb-5 bg-body">Fin de la séance</span>
+            <br> {{ form_widget(form.ended_at,{'attr':{'class':'form-control', 'placeholder':" *",'required':'required', 'id':''}}) }}
+        </div>
+        <br><br> {{ form_widget(form.soundplay,{'attr':{'class':'form-control', 'placeholder':" Liste des musiques*",'required':'required', 'id':''}}) }}<br><br>
+        
+       <br><br> 
+        {{ form_widget(form.qdata,{'attr':{'class':'form-control', 'placeholder':" *",'required':'required', 'id':''}}) }}
+        
+    
+       <br><br> 
+       <span class="rounded shadow-sm p-3 mb-5 bg-body h2">Observations</span>
+
+        {{ form_widget(form.comment,{'attr':{'class':'form-control', 'placeholder':" *",'required':'required', 'id':''}}) }}
+        
+       <br><br> 
+       <span class="rounded shadow-sm p-3 mb-5 bg-body h2">Prochain rendez-vous</span>
+
+        {{ form_widget(form.rdate,{'attr':{'class':'form-control', 'placeholder':" *",'required':'required', 'id':''}}) }}
+        
+      
+        <br><br>
+    
+    </div>
+    {#{ form_widget(form) }#}
+    
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+    {{ form_end(form) }}
+    
+</div>

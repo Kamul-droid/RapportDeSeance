@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GlobalDescription index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="form-group col-lg-10">
+    <h1>GlobalDescription index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Subject</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for global_description in global_descriptions %}
+            <tr>
+                <td>{{ global_description.id }}</td>
+                <td>{{ global_description.subject }}</td>
+                <td>
+                    <a href="{{ path('app_global_description_show', {'id': global_description.id}) }}">show</a>
+                    <a href="{{ path('app_global_description_edit', {'id': global_description.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_global_description_new') }}">Create new</a>
+
+    </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New GlobalDescription{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="form-group col-lg-10">
+    <h1>Create new GlobalDescription</h1>
+
+    {{ include('global_description/_form.html.twig') }}
+
+    <a href="{{ path('app_global_description_index') }}">back to list</a>
+    </div>
+        
+    </div>
+
+    {% endblock %}

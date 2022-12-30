@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Quanfield{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top:150px;">
+    <div class="form-group col-lg-5">
+    <h1>Create new Quanfield</h1>
+
+    {{ include('quanfield/_form.html.twig') }}
+
+    <a href="{{ path('app_quanfield_index') }}">back to list</a>
+    
+    </div>
+    </div>
+{% endblock %}

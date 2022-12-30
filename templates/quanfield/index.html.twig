@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quanfield index{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top:150px;">
+    <div class="form-group col-lg-5">
+    <h1>Quanfield index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for quanfield in quanfields %}
+            <tr>
+                <td>{{ quanfield.id }}</td>
+                <td>{{ quanfield.name }}</td>
+                <td>
+                    <a href="{{ path('app_quanfield_show', {'id': quanfield.id}) }}">show</a>
+                    <a href="{{ path('app_quanfield_edit', {'id': quanfield.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_quanfield_new') }}">Create new</a>
+</div>
+</div>
+{% endblock %}

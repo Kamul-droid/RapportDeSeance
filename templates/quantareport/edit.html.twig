@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Quantareport{% endblock %}
+
+{% block body %}
+    <h1>Edit Quantareport</h1>
+
+    {{ include('quantareport/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_quantareport_index') }}">back to list</a>
+
+    {{ include('quantareport/_delete_form.html.twig') }}
+{% endblock %}

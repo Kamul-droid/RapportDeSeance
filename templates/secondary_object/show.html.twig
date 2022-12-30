@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SecondaryObject{% endblock %}
+
+{% block body %}
+    <h1>SecondaryObject</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ secondary_object.id }}</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>{{ secondary_object.subject }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_secondary_object_index') }}">back to list</a>
+
+    <a href="{{ path('app_secondary_object_edit', {'id': secondary_object.id}) }}">edit</a>
+
+    {{ include('secondary_object/_delete_form.html.twig') }}
+{% endblock %}

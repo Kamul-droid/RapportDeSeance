@@ -11,28 +11,53 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
+
+    // /**
+    //  * @Route("/", name="app_login")
+    //  */
+
+    // public function home():Response
+    // {
+    //     return $this->render('security/login.html.twig', [
+
+    //     ]);
+
+    // }
+
     /**
      * @Route("/home", name="app_home")
      */
 
     public function index(): Response
     {
-        return $this->render('menu.html.twig', [
+        return $this->render('choice.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+    
+    /**
+     * @Route("/quantaform", name="app_quantaf")
+     */
+
+    public function qf(): Response
+    {
+        return $this->render('client/index.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }
 
     /**
-     * @Route("/", name="app_home1")
+     * @Route("/lifeform", name="app_life")
      */
 
-    public function home():Response
+    public function lif(): Response
     {
-        return $this->render('home.html.twig', [
-
+        return $this->render('choice.html.twig', [
+            'controller_name' => 'HomeController',
         ]);
-
     }
+
+
 
     /**
      * @Route("/fillform", name="app_fill")

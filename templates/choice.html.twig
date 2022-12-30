@@ -1,0 +1,28 @@
+{% extends 'base.html.twig'%}
+
+{%block body  %}
+<div class="container text-center arriere_plan " >
+    <h2 class="m-5" style="background-size: 30px"> FORMULAIRE VIBRATION </h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col-md-6">
+        <div class="card border border-5 border-success" >
+            <img src="{{asset("images/quantaScanner.png")}}"  width="200" height="300" class="card-img-top" alt="..." h>
+            <div class="card-body">
+                <h5 class="card-title"> <a  href="{{path("app_quantareport_new")}}" class="btn btn-outline-primary">FORMULAIRE QUANTASCAN</a></h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border border-5 border-success">
+            <img src="{{asset("images/benifits_img1.png")}}" width="200" height="300" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><a  href="{{path("app_life")}}" class="btn btn-outline-primary">FORMULAIRE LIFE</a></h5>
+            </div>
+        </div>
+    </div>
+  
+      
+</div>
+</div>
+{%endblock %}
+

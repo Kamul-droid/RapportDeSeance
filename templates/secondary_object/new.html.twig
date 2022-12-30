@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New SecondaryObject{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="col-md-5">
+    <h1>Create new SecondaryObject</h1>
+
+    {{ include('secondary_object/_form.html.twig') }}
+
+    <a href="{{ path('app_secondary_object_index') }}">back to list</a>
+</div>
+</div>
+{% endblock %}

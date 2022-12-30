@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit QuanData{% endblock %}
+
+{% block body %}
+    <h1>Edit QuanData</h1>
+
+    {{ include('quan_data/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_quan_data_index') }}">back to list</a>
+
+    {{ include('quan_data/_delete_form.html.twig') }}
+{% endblock %}

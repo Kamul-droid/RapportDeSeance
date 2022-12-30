@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}QuanData index{% endblock %}
+
+{% block body %}
+    <h1>QuanData index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Picto</th>
+                <th>Disease</th>
+                <th>MicroBact</th>
+                <th>EmotionConflit</th>
+                <th>Mt</th>
+                <th>IncDec</th>
+                <th>Vgt</th>
+                <th>Observation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for quan_datum in quan_datas %}
+            <tr>
+                <td>{{ quan_datum.id }}</td>
+                <td>{{ quan_datum.picto }}</td>
+                <td>{{ quan_datum.disease }}</td>
+                <td>{{ quan_datum.microBact }}</td>
+                <td>{{ quan_datum.emotionConflit }}</td>
+                <td>{{ quan_datum.mt }}</td>
+                <td>{{ quan_datum.incDec }}</td>
+                <td>{{ quan_datum.vgt }}</td>
+                <td>{{ quan_datum.observation }}</td>
+                <td>
+                    <a href="{{ path('app_quan_data_show', {'id': quan_datum.id}) }}">show</a>
+                    <a href="{{ path('app_quan_data_edit', {'id': quan_datum.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_quan_data_new') }}">Create new</a>
+{% endblock %}

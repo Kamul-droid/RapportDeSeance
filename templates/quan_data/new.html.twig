@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New QuanData{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top:10px;">
+    <div class="form-group col-lg-5">
+    <h1>Create new QuanData</h1>
+
+    {{ include('quan_data/_form.html.twig') }}
+
+    <a href="{{ path('app_quan_data_index') }}">back to list</a>
+</div>
+</div>
+{% endblock %}

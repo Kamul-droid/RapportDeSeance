@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New GlobalState{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="form-group col-lg-10">
+    <h1>Create new GlobalState</h1>
+
+    {{ include('global_state/_form.html.twig') }}
+
+    <a href="{{ path('app_global_state_index') }}">back to list</a>
+    </div>
+    </div>
+        
+    {% endblock %}

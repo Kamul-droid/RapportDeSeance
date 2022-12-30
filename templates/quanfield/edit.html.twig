@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Quanfield{% endblock %}
+
+{% block body %}
+    <h1>Edit Quanfield</h1>
+
+    {{ include('quanfield/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_quanfield_index') }}">back to list</a>
+
+    {{ include('quanfield/_delete_form.html.twig') }}
+{% endblock %}

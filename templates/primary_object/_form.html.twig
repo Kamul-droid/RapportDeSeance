@@ -1,0 +1,10 @@
+<div class="container">
+
+{{ form_start(form) }}
+<div class="form-group col-lg-10">
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+</div>
+{{ form_end(form) }}
+</div>
+

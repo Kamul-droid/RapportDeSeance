@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GlobalState{% endblock %}
+
+{% block body %}
+    <h1>GlobalState</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ global_state.id }}</td>
+            </tr>
+            <tr>
+                <th>Descript</th>
+                <td>{{ global_state.descript }}</td>
+            </tr>
+            <tr>
+                <th>Since</th>
+                <td>{{ global_state.since ? global_state.since|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Duration</th>
+                <td>{{ global_state.duration }}</td>
+            </tr>
+            <tr>
+                <th>Observation</th>
+                <td>{{ global_state.observation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_global_state_index') }}">back to list</a>
+
+    <a href="{{ path('app_global_state_edit', {'id': global_state.id}) }}">edit</a>
+
+    {{ include('global_state/_delete_form.html.twig') }}
+{% endblock %}

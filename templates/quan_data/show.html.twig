@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}QuanData{% endblock %}
+
+{% block body %}
+    <h1>QuanData</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ quan_datum.id }}</td>
+            </tr>
+            <tr>
+                <th>Picto</th>
+                <td>{{ quan_datum.picto }}</td>
+            </tr>
+            <tr>
+                <th>Disease</th>
+                <td>{{ quan_datum.disease }}</td>
+            </tr>
+            <tr>
+                <th>MicroBact</th>
+                <td>{{ quan_datum.microBact }}</td>
+            </tr>
+            <tr>
+                <th>EmotionConflit</th>
+                <td>{{ quan_datum.emotionConflit }}</td>
+            </tr>
+            <tr>
+                <th>Mt</th>
+                <td>{{ quan_datum.mt }}</td>
+            </tr>
+            <tr>
+                <th>IncDec</th>
+                <td>{{ quan_datum.incDec }}</td>
+            </tr>
+            <tr>
+                <th>Vgt</th>
+                <td>{{ quan_datum.vgt }}</td>
+            </tr>
+            <tr>
+                <th>Observation</th>
+                <td>{{ quan_datum.observation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_quan_data_index') }}">back to list</a>
+
+    <a href="{{ path('app_quan_data_edit', {'id': quan_datum.id}) }}">edit</a>
+
+    {{ include('quan_data/_delete_form.html.twig') }}
+{% endblock %}
