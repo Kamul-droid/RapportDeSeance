@@ -21,43 +21,65 @@ class QuanDataType extends AbstractType
                 'label' => 'Module',
                 'choice_label' => 'name',
                 'attr' => [
-                    'class' => 'form-control','placeholder'=>'',
+                    'class' => 'form-control','placeholder'=>'Name',
                 ],
             
         ])
             ->add('picto',ChoiceType::class,[
                 'label'=>'Pictogramme',
                 'choices' => [
-                    '1'=>'1',
-                    '2'=>'2',
-                    '3'=>'3',
-                    '4'=>'4',
-                    '5'=>'5',
-                    '6'=>'6',
+                    'Pictogramme 1'=>'1',
+                    
+                    'Pictogramme 2'=>'2',
+                    'Pictogramme 3'=>'3',
+                    'Pictogramme 4'=>'4',
+                    'Pictogramme 5'=>'5',
+                    'Pictogramme 6'=>'6',
                    
                 ],
                
             ])
             ->add('disease',TextType::class,[
                 'label'=>'Maladies',
+                'attr' => [
+                    'class' => 'form-control','placeholder'=>'Maladies',
+                ],
             ])
             ->add('microBact',TextType::class,[
                 'label'=>'Microbes / Bactéries',
+                'attr' => [
+                    'class' => 'form-control','placeholder'=>'Microbes / Bactéries',
+                ],
             ])
             ->add('emotionConflit',TextType::class,[
                 'label'=>'Emotionnel / conflits',
+                'attr' => [
+                    'class' => 'form-control','placeholder'=>'Emotionnel / conflits',
+                ],
             ])
             ->add('mt',TextType::class,[
                 'label'=>'Metathérapie',
+                'attr' => [
+                    'class' => 'form-control','placeholder'=>'Metathérapie',
+                ],
             ])
             ->add('incDec',TextType::class,[
                 'label'=>'Amélioration / Affaiblissement',
+                'attr' => [
+                    'class' => 'form-control','placeholder'=>'Amélioration / Affaiblissement',
+                ],
             ])
             ->add('vgt',TextType::class,[
                 'label'=>'Vegetotest',
+                'attr' => [
+                    'class' => 'form-control','placeholder'=>'Vegetotest',
+                ],
             ])
             ->add('med',TextType::class,[
                 'label'=>'Medicament',
+                'attr' => [
+                    'class' => 'form-control','placeholder'=>'Medicament',
+                ],
             ])
             ->add('observation')
         ;

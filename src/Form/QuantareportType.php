@@ -106,7 +106,8 @@ class QuantareportType extends AbstractType
 
             ]
             )
-            ->add('comment',TextareaType::class,[ 'attr' => [
+            ->add('comment',TextareaType::class,[ 
+                'attr' => [
                 'class' => 'form-control','placeholder'=>'Observation',
             ],
             ])
