@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ConseilEvaluationPourAutoEvaluation;
+use App\Entity\life\ConseilEvaluationPourAutoEvaluation;
 use App\Form\ConseilEvaluationPourAutoEvaluationType;
 use App\Repository\ConseilEvaluationPourAutoEvaluationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

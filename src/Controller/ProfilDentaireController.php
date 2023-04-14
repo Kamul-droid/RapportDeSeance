@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilDentaire;
+use App\Entity\life\ProfilDentaire;
 use App\Form\ProfilDentaireType;
 use App\Repository\ProfilDentaireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

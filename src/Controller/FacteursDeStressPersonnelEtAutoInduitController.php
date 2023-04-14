@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\FacteursDeStressPersonnelEtAutoInduit;
+use App\Entity\life\FacteursDeStressPersonnelEtAutoInduit;
 use App\Form\FacteursDeStressPersonnelEtAutoInduitType;
 use App\Repository\FacteursDeStressPersonnelEtAutoInduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

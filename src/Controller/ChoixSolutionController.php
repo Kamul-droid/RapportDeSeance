@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ChoixSolution;
+use App\Entity\life\ChoixSolution;
 use App\Form\ChoixSolutionType;
 use App\Repository\ChoixSolutionRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilCirculationCoeur;
+use App\Entity\life\ProfilCirculationCoeur;
 use App\Form\ProfilCirculationCoeurType;
 use App\Repository\ProfilCirculationCoeurRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

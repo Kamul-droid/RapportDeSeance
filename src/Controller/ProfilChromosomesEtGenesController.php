@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilChromosomesEtGenes;
+use App\Entity\life\ProfilChromosomesEtGenes;
 use App\Form\ProfilChromosomesEtGenesType;
 use App\Repository\ProfilChromosomesEtGenesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

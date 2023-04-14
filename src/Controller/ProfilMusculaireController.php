@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilMusculaire;
+use App\Entity\life\ProfilMusculaire;
 use App\Form\ProfilMusculaireType;
 use App\Repository\ProfilMusculaireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

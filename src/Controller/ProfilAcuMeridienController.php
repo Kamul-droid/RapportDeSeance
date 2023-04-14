@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilAcuMeridien;
+use App\Entity\life\ProfilAcuMeridien;
 use App\Form\ProfilAcuMeridienType;
 use App\Repository\ProfilAcuMeridienRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\MiasmesEtAntiVieillissement;
+use App\Entity\life\MiasmesEtAntiVieillissement;
 use App\Form\MiasmesEtAntiVieillissementType;
 use App\Repository\MiasmesEtAntiVieillissementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

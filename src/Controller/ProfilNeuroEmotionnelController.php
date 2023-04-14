@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilNeuroEmotionnel;
+use App\Entity\life\ProfilNeuroEmotionnel;
 use App\Form\ProfilNeuroEmotionnelType;
 use App\Repository\ProfilNeuroEmotionnelRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

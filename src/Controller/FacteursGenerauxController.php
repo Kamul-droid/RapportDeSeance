@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\FacteursGeneraux;
+use App\Entity\life\FacteursGeneraux;
 use App\Form\FacteursGenerauxType;
 use App\Repository\FacteursGenerauxRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

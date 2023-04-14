@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilCouleursChakras;
+use App\Entity\life\ProfilCouleursChakras;
 use App\Form\ProfilCouleursChakrasType;
 use App\Repository\ProfilCouleursChakrasRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

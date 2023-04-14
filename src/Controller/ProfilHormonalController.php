@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilHormonal;
+use App\Entity\life\ProfilHormonal;
 use App\Form\ProfilHormonalType;
 use App\Repository\ProfilHormonalRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

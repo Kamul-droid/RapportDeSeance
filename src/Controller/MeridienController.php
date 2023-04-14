@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Meridien;
+use App\Entity\life\Meridien;
 use App\Form\MeridienType;
 use App\Repository\MeridienRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

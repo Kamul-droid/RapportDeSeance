@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\FacteursMiasmatiques;
+use App\Entity\life\FacteursMiasmatiques;
 use App\Form\FacteursMiasmatiquesType;
 use App\Repository\FacteursMiasmatiquesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

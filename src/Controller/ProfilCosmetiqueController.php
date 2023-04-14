@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilCosmetique;
+use App\Entity\life\ProfilCosmetique;
 use App\Form\ProfilCosmetiqueType;
 use App\Repository\ProfilCosmetiqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

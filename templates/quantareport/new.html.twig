@@ -1,38 +1,54 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset("css/custom_style.css")}}">
 
-{% block title %}New Quantareport{% endblock %}
+{% endblock %}
+{% block title %}Nouveau rapport de séance{% endblock %}
 {% form_theme form _self %}
 {% block body %}
 <section>
-<div class="container text-center" style="margin-top:50px; margin-left:150px;">
-    <div class="form-group col-lg-11 ">
-    <h1 class="text-center border border-5 rounded-3 shadow-lg p-3 mb-5 bg-body" style="color:blue;">Rapport de séance du Quantascan</h1>
-    <div class="rounded shadow-sm p-3 mb-5 bg-body h2" style="padding-top:5px; margin-bottom:15px;" class="h2">
-        Type de séance
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Rapport de séance du scanner quantique Quantascan</h1>
+            
+        </div>
+            {{ include('quantareport/_form.html.twig') }}
     </div>
-   
-    {{ include('quantareport/_form.html.twig') }}
-    
-    <a href="{{ path('app_quantareport_index') }}">back to list</a>
-</div>
-</div>
-<div class="h5 text-center">
-   Copyright @  Ma Vibration
-</div>
+    <div class="text-center" style="margin-top:125px ; margin-bottom:50px; ">
+        <a href="{{ path('app_quantareport_index') }}" class="btn btn-primary">Liste des rapports</a>
+    </div>
+
+    <div class="h5 text-center">
+    Copyright@2023  Ma Vibration
+    </div>
 
 </section>
 
 {% endblock %}
   
 {% block _quantareport_gstate_widget %}
-<div class="h2 text-center">
-    Etat général
-</div>
-    <p> Vous pouvez ajouter plusieurs état  </p>
-    {{ form_widget(form) }}
-    <div class="form-group">
-        <button type="button" id="add-gstate" class="btn btn-primary"> Ajouter nouveau état </button>
+
+    <div class="row " style="justify-content:center; display:flex;">
+            {{ form_label(form) }}
+        <div class="row" style="border-radius:0.375rem; background-color:#e9ecef; border: 1 solid; padding:0.375rem 0.75rem;">
+                
+            <div class="col-8">
+                
+                {{ form_widget(form) }}
+            </div>
+            
+            <div class="col-2" style="margin:auto; justify-content:center;">
+            
+                <button type="button" id="add-gstate" class="btn btn-primary"> Ajouter nouveau état </button>
+            </div>
+            
+        </div>
+        <div style=" margin-bottom:75px;">
+        </div>
+
     </div>
+    
+    
 {% endblock %}
 
 {% block _quantareport_gstate_entry_row %}
@@ -43,45 +59,84 @@
 {% block _quantareport_gstate_entry_widget %}
     <div class="form-group" id="block_{{form.vars.id}}">
         <div class="row ">
-            <div class="col-10">
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-3">
-                            
-                            {{form_label(form.descript)}}
-                        </div>
-                        <div class="col-9">
-                            {{form_widget(form.descript)}}
-                        </div>
+            
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-3">
+                        
+                        {{form_label(form.descript)}}
+                    </div>
+                    <div class="col-9">
+                        {{form_widget(form.descript)}}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-3">
+                        
+                        {{form_label(form.since)}}
+                    </div>
+                    <div class="col-9">
+                        {{form_widget(form.since)}}
                     </div>
                 </div>
                 
-                <div class="col-6">
-                    {{form_widget(form.since)}}
-                </div>
-                <div class="col-6">
-                    {{form_widget(form.duration)}}
-                </div>
-                <div class="col-6">
-                    {{form_widget(form.observation)}}
-                </div>
-            </div>  
-            <div class="col-2">
-                <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger">X</button>
             </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-3">
+                        
+                        {{form_label(form.duration)}}
+                    </div>
+                    <div class="col-9">
+                        {{form_widget(form.duration)}}
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-3">
+                        
+                        {{form_label(form.observation)}}
+                    </div>
+                    <div class="col-9">
+                        {{form_widget(form.observation)}}
+                    </div>
+                </div>
+                
+            </div>
+        </div>  
+        <div class="row " style="justify-content:center; margin:10px; padding: 15px 250px;">
+            <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger">Supprimer</button>
         </div>
+        
     </div>
 {% endblock %}
 
 {% block _quantareport_health_widget %}
-<div class="h2 text-center">
-    Historique de santé
-</div>
-    <p> Vous pouvez ajouter plusieurs données historiques  </p>
-    {{ form_widget(form) }}
-    <div class="form-group">
-        <button type="button" id="add-health" class="btn btn-primary"> Ajouter nouveau historique </button>
+
+    <div class="row " style="justify-content:center; display:flex;">
+            {{ form_label(form) }}
+        <div class="row" style="border-radius:0.375rem; background-color:#e9ecef; border: 1 solid; padding:0.375rem 0.75rem;">
+                
+            <div class="col-10">
+                
+                {{ form_widget(form) }}
+            </div>
+            
+            <div class="col-2" style="margin:auto; justify-content:center;">
+            
+                
+                 <button type="button" id="add-health" class="btn btn-primary"> Ajouter nouvelle historique </button>
+            </div>
+        </div>
+        <div style=" margin-bottom:75px;">
+        </div>
     </div>
+   
 {% endblock %}
 
 {% block _quantareport_health_entry_row %}
@@ -92,34 +147,73 @@
 {% block _quantareport_health_entry_widget %}
     <div class="form-group" id="block_{{form.vars.id}}">
         <div class="row">
-            <div class="col-10">
-                <div class="col-6">
-                {{form_widget(form.event)}}
+            
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            
+                            {{form_label(form.event)}}
+                        </div>
+                        <div class="col-6">
+                            {{form_widget(form.event)}}
+                        </div>
+                    </div>
+                
                 </div>
-                <div class="col-6">
-                    {{form_widget(form.illness)}}
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            
+                            {{form_label(form.illness)}}
+                        </div>
+                        <div class="col-6">
+                            {{form_widget(form.illness)}}
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="col-6">
-                    {{form_widget(form.descript)}}
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            
+                            {{form_label(form.descript)}}
+                        </div>
+                        <div class="col-6">
+                            {{form_widget(form.descript)}}
+                        </div>
+                    </div>
+                    
                 </div>
                 
-            </div>  
-            <div class="col-2">
-                <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger ">Xxx</button>
-            </div>
+             
+            
         </div>
+        <div class="row" style="justify-content:center; margin:10px; padding: 15px 250px;">
+                <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger ">Supprimer</button>
+            </div>
     </div>
 {% endblock %}
 
 {% block _quantareport_qdata_widget %}
-<div class="h2 text-center">
-    Données de la séance
- </div>
-    <p> Vous pouvez ajouter plusieurs champs correspondants aux résultats  </p>
-    {{ form_widget(form) }}
-    <div class="form-group">
-        <button type="button" id="add-qdata" class="btn btn-primary"> Ajouter nouveau module </button>
+
+    <div class="row " style="justify-content:center; display:flex;">
+            {{ form_label(form) }}
+        <div class="row" style="border-radius:0.375rem; background-color:#e9ecef; border: 1 solid; padding:0.375rem 0.75rem;">
+                
+            <div class="col-10">
+                
+                {{ form_widget(form) }}
+            </div>
+            
+            <div class="col-2" style="margin:auto; justify-content:center;">
+            
+                <button type="button" id="add-qdata" class="btn btn-primary"> Ajouter nouveau module </button>
+    
+            </div>
+        </div>
     </div>
+    
+    
 {% endblock %}
 
 {% block _quantareport_qdata_entry_row %}
@@ -130,41 +224,97 @@
 {% block _quantareport_qdata_entry_widget %}
     <div class="form-group" id="block_{{form.vars.id}}">
         <div class="row">
-            <div class="col-9">
-                <div class="col-6">
-                {{form_widget(form.quanfield)}}
+            <div class="col-12">
+                
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.quanfield)}}
+                    </div>
+                    <div class="col-8">
+                    {{form_widget(form.quanfield)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px; border-radius:50px;">
+                    <div class="col-4">
+                    {{form_label(form.picto)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.picto)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.disease)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.disease)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.microBact)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.microBact)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.emotionConflit)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.emotionConflit)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.mt)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.mt)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.incDec)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.incDec)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.vgt)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.vgt)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.med)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.med)}}
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="row" style="margin:15px 15px;">
+                    <div class="col-4">
+                    {{form_label(form.observation)}}
+                    </div>
+                    <div class="col-8">
                     {{form_widget(form.observation)}}
+                    </div>
                 </div>
+                
+                  
+               
+                
+                
             </div>  
-            <div class="col-3">
-                <h1>ici</h1>
-                <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger ">X</button>
+            <div class="row" style="justify-content:center; margin:10px; padding: 15px 250px;">
+                
+                <button type="button"  data-action="delete"  data-target="#block_{{form.vars.id}}" class="btn btn-danger ">Supprimer</button>
             </div>
         </div>
     </div>

@@ -10,6 +10,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class QuanDataType extends AbstractType
 {
@@ -50,12 +51,20 @@ class QuanDataType extends AbstractType
                 'attr' => [
                     'class' => 'form-control','placeholder'=>'Microbes / Bactéries',
                 ],
+                'label_attr'=>[
+                    'style'=>'width:auto;',
+                    
+                ]
             ])
             ->add('emotionConflit',TextType::class,[
                 'label'=>'Emotionnel / conflits',
                 'attr' => [
                     'class' => 'form-control','placeholder'=>'Emotionnel / conflits',
                 ],
+                'label_attr'=>[
+                    'style'=>'width:auto;',
+                    
+                ]
             ])
             ->add('mt',TextType::class,[
                 'label'=>'Metathérapie',
@@ -66,8 +75,12 @@ class QuanDataType extends AbstractType
             ->add('incDec',TextType::class,[
                 'label'=>'Amélioration / Affaiblissement',
                 'attr' => [
-                    'class' => 'form-control','placeholder'=>'Amélioration / Affaiblissement',
+                    'class' => '','placeholder'=>'Amélioration / Affaiblissement',
                 ],
+                'label_attr'=>[
+                    'style'=>'width:auto;',
+                    
+                ]
             ])
             ->add('vgt',TextType::class,[
                 'label'=>'Vegetotest',
@@ -81,7 +94,11 @@ class QuanDataType extends AbstractType
                     'class' => 'form-control','placeholder'=>'Medicament',
                 ],
             ])
-            ->add('observation')
+            ->add('observation',TextareaType::class,[
+                'attr'=>[
+                    'rows'=>5,
+                ]
+            ])
         ;
     }
 

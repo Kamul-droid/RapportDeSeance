@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\TableALanger;
+use App\Entity\life\TableALanger;
 use App\Form\TableALangerType;
 use App\Repository\TableALangerRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilCerveau;
+use App\Entity\life\ProfilCerveau;
 use App\Form\ProfilCerveauType;
 use App\Repository\ProfilCerveauRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

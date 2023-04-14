@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Transfert;
+use App\Entity\life\Transfert;
 use App\Form\TransfertType;
 use App\Repository\TransfertRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

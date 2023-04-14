@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\AnimauxFamilles;
+use App\Entity\life\AnimauxFamilles;
 use App\Form\AnimauxFamillesType;
 use App\Repository\AnimauxFamillesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

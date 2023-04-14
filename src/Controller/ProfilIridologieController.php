@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilIridologie;
+use App\Entity\life\ProfilIridologie;
 use App\Form\ProfilIridologieType;
 use App\Repository\ProfilIridologieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

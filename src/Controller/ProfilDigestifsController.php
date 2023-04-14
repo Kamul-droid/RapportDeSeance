@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilDigestifs;
+use App\Entity\life\ProfilDigestifs;
 use App\Form\ProfilDigestifsType;
 use App\Repository\ProfilDigestifsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

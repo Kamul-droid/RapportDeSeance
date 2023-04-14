@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\FicheClient;
-use App\Entity\ProfilAcuMeridien;
+use App\Entity\life\ProfilAcuMeridien;
 use App\Form\FicheClientType;
 use App\Repository\FicheClientRepository;
 use App\Repository\ProfilAcuMeridienRepository;

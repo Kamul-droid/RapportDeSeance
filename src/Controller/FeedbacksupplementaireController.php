@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Feedbacksupplementaire;
+use App\Entity\life\Feedbacksupplementaire;
 use App\Form\FeedbacksupplementaireType;
 use App\Repository\FeedbacksupplementaireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilAnimaux;
+use App\Entity\life\ProfilAnimaux;
 use App\Form\ProfilAnimauxType;
 use App\Repository\ProfilAnimauxRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilCellCom;
+use App\Entity\life\ProfilCellCom;
 use App\Form\ProfilCellComType;
 use App\Repository\ProfilCellComRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

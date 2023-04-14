@@ -43,6 +43,7 @@ class GlobalStateType extends AbstractType
                 // ]
             ])
             ->add('observation',TextareaType::class,[
+                'label'=>'Détails',
                 'attr'=>['class'=>'form-control', 'row'=>'5']
             ])
         ;

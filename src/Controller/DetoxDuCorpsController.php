@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\DetoxDuCorps;
+use App\Entity\life\DetoxDuCorps;
 use App\Form\DetoxDuCorpsType;
 use App\Repository\DetoxDuCorpsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

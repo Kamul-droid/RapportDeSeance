@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilOs;
+use App\Entity\life\ProfilOs;
 use App\Form\ProfilOsType;
 use App\Repository\ProfilOsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

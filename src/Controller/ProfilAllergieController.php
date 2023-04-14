@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilAllergie;
+use App\Entity\life\ProfilAllergie;
 use App\Form\ProfilAllergieType;
 use App\Repository\ProfilAllergieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

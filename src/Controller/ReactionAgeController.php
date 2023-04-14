@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ReactionAge;
+use App\Entity\life\ReactionAge;
 use App\Form\ReactionAgeType;
 use App\Repository\ReactionAgeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

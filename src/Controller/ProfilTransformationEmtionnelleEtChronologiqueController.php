@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilTransformationEmtionnelleEtChronologique;
+use App\Entity\life\ProfilTransformationEmtionnelleEtChronologique;
 use App\Form\ProfilTransformationEmtionnelleEtChronologiqueType;
 use App\Repository\ProfilTransformationEmtionnelleEtChronologiqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

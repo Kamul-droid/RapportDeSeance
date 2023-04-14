@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilRifeSimili;
+use App\Entity\life\ProfilRifeSimili;
 use App\Form\ProfilRifeSimiliType;
 use App\Repository\ProfilRifeSimiliRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

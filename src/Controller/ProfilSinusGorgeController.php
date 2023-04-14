@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilSinusGorge;
+use App\Entity\life\ProfilSinusGorge;
 use App\Form\ProfilSinusGorgeType;
 use App\Repository\ProfilSinusGorgeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

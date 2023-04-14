@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilHomeopathique;
+use App\Entity\life\ProfilHomeopathique;
 use App\Form\ProfilHomeopathiqueType;
 use App\Repository\ProfilHomeopathiqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

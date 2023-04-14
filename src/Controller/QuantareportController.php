@@ -50,6 +50,7 @@ class QuantareportController extends AbstractController
         $healthHistory = new HealthHistory();
        
         if ($form->isSubmitted() && $form->isValid()) {
+            
             foreach ($quantareport ->getGstate() as $state){
                 // $quantareport -> addGstate($state);
                 $state->setQuantareport($quantareport);
@@ -69,23 +70,24 @@ class QuantareportController extends AbstractController
                 
             }
             
-            // foreach ($quantareport ->getSobject() as $sobjet){
-            //     $quantareport -> addSobject($sobjet);
+            foreach ($quantareport ->getSobject() as $sobjet){
+                $quantareport -> addSobject($sobjet);
                 
-            // }
-            // foreach ($quantareport ->getPobject() as $pobjet){
-            //     $quantareport -> addPobject($pobjet);
+            }
+            foreach ($quantareport ->getPobject() as $pobjet){
+                $quantareport -> addPobject($pobjet);
                 
-            // }
+            }
             // $startd = $form->get('started_at');
             // dump($startd);
             // $quantareport -> setStartedAt();
             // $quantareport -> setEndedAt();
             // $quantareport ->setRdate();
+           
             $quantareportRepository->add($quantareport);
             return $this->redirectToRoute('app_quantareport_index', [], Response::HTTP_SEE_OTHER);
         }
-
+       
         return $this->render('quantareport/new.html.twig', [
             'quantareport' => $quantareport,
             'form' => $form->createView(),

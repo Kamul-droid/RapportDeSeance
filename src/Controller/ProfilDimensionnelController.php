@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilDimensionnel;
+use App\Entity\life\ProfilDimensionnel;
 use App\Form\ProfilDimensionnelType;
 use App\Repository\ProfilDimensionnelRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

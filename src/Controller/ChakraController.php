@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Chakra;
+use App\Entity\life\Chakra;
 use App\Form\ChakraType;
 use App\Repository\ChakraRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

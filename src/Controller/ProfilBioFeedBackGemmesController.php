@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilBioFeedBackGemmes;
+use App\Entity\life\ProfilBioFeedBackGemmes;
 use App\Form\ProfilBioFeedBackGemmesType;
 use App\Repository\ProfilBioFeedBackGemmesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ReglageOndesCerebrales;
+use App\Entity\life\ReglageOndesCerebrales;
 use App\Form\ReglageOndesCerebralesType;
 use App\Repository\ReglageOndesCerebralesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

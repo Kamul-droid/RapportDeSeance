@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilLymphatique;
+use App\Entity\life\ProfilLymphatique;
 use App\Form\ProfilLymphatiqueType;
 use App\Repository\ProfilLymphatiqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

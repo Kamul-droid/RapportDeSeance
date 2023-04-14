@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilNerfs;
+use App\Entity\life\ProfilNerfs;
 use App\Form\ProfilNerfsType;
 use App\Repository\ProfilNerfsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

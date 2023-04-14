@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Vitamines;
+use App\Entity\life\Vitamines;
 use App\Form\VitaminesType;
 use App\Repository\VitaminesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

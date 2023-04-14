@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ToxinesEnvironnementalesEtIndustrielles;
+use App\Entity\life\ToxinesEnvironnementalesEtIndustrielles;
 use App\Form\ToxinesEnvironnementalesEtIndustriellesType;
 use App\Repository\ToxinesEnvironnementalesEtIndustriellesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

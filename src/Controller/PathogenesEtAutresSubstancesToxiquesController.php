@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\PathogenesEtAutresSubstancesToxiques;
+use App\Entity\life\PathogenesEtAutresSubstancesToxiques;
 use App\Form\PathogenesEtAutresSubstancesToxiquesType;
 use App\Repository\PathogenesEtAutresSubstancesToxiquesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

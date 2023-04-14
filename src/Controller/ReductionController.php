@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Reduction;
+use App\Entity\life\Reduction;
 use App\Form\ReductionType;
 use App\Repository\ReductionRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

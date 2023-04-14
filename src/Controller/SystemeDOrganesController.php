@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\SystemeDOrganes;
+use App\Entity\life\SystemeDOrganes;
 use App\Form\SystemeDOrganesType;
 use App\Repository\SystemeDOrganesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

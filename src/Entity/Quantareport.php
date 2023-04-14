@@ -40,22 +40,22 @@ class Quantareport
     private $soundplay;
 
     /**
-     * @ORM\OneToMany(targetEntity=PrimaryObject::class, mappedBy="quantareport")
+     * @ORM\OneToMany(targetEntity=PrimaryObject::class, mappedBy="quantareport", cascade={"persist"})
      */
     private $pobject;
 
     /**
-     * @ORM\OneToMany(targetEntity=SecondaryObject::class, mappedBy="quantareport")
+     * @ORM\OneToMany(targetEntity=SecondaryObject::class, mappedBy="quantareport", cascade={"persist"})
      */
     private $sobject;
 
     /**
-     * @ORM\OneToMany(targetEntity=GlobalState::class, mappedBy="quantareport")
+     * @ORM\OneToMany(targetEntity=GlobalState::class, mappedBy="quantareport", cascade={"persist"})
      */
     private $gstate;
 
     /**
-     * @ORM\OneToMany(targetEntity=HealthHistory::class, mappedBy="quantareport")
+     * @ORM\OneToMany(targetEntity=HealthHistory::class, mappedBy="quantareport",cascade={"persist"})
      */
     private $health;
 
@@ -77,7 +77,7 @@ class Quantareport
     private $client;
 
     /**
-     * @ORM\OneToMany(targetEntity=QuanData::class, mappedBy="quantareport")
+     * @ORM\OneToMany(targetEntity=QuanData::class, mappedBy="quantareport", cascade={"persist"})
      */
     private $qdata;
 

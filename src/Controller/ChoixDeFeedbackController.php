@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ChoixDeFeedback;
+use App\Entity\life\ChoixDeFeedback;
 use App\Form\ChoixDeFeedbackType;
 use App\Repository\ChoixDeFeedbackRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

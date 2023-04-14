@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilDetoxEtStressMultiples;
+use App\Entity\life\ProfilDetoxEtStressMultiples;
 use App\Form\ProfilDetoxEtStressMultiplesType;
 use App\Repository\ProfilDetoxEtStressMultiplesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

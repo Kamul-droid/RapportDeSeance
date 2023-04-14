@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\BalanceHormonaleFemelle;
+use App\Entity\life\BalanceHormonaleFemelle;
 use App\Form\BalanceHormonaleFemelleType;
 use App\Repository\BalanceHormonaleFemelleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

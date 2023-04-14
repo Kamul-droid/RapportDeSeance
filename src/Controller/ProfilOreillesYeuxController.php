@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilOreillesYeux;
+use App\Entity\life\ProfilOreillesYeux;
 use App\Form\ProfilOreillesYeuxType;
 use App\Repository\ProfilOreillesYeuxRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

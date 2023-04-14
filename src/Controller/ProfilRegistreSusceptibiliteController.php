@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilRegistreSusceptibilite;
+use App\Entity\life\ProfilRegistreSusceptibilite;
 use App\Form\ProfilRegistreSusceptibiliteType;
 use App\Repository\RegistreSusceptibiliteRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

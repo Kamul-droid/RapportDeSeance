@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\EquilibreHarmoniqueCerveauGaucheCerveauDroit;
+use App\Entity\life\EquilibreHarmoniqueCerveauGaucheCerveauDroit;
 use App\Form\EquilibreHarmoniqueCerveauGaucheCerveauDroitType;
 use App\Repository\EquilibreHarmoniqueCerveauGaucheCerveauDroitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

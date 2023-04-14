@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Susceptibilite;
+use App\Entity\life\Susceptibilite;
 use App\Form\SusceptibiliteType;
 use App\Repository\SusceptibiliteRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

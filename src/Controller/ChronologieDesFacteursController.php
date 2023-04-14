@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ChronologieDesFacteurs;
+use App\Entity\life\ChronologieDesFacteurs;
 use App\Form\ChronologieDesFacteursType;
 use App\Repository\ChronologieDesFacteursRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

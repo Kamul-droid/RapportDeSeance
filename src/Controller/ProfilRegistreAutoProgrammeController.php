@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilRegistreAutoProgramme;
+use App\Entity\life\ProfilRegistreAutoProgramme;
 use App\Form\ProfilRegistreAutoProgrammeType;
 use App\Repository\ProfilRegistreAutoProgrammeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

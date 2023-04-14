@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ChoixBioSpecifique;
+use App\Entity\life\ChoixBioSpecifique;
 use App\Form\ChoixBioSpecifiqueType;
 use App\Repository\ChoixBioSpecifiqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

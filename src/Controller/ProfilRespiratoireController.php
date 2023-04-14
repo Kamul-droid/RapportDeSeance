@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilRespiratoire;
+use App\Entity\life\ProfilRespiratoire;
 use App\Form\ProfilRespiratoireType;
 use App\Repository\ProfilRespiratoireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

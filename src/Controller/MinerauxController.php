@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Mineraux;
+use App\Entity\life\Mineraux;
 use App\Form\MinerauxType;
 use App\Repository\MinerauxRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

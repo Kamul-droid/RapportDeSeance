@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilNutrition;
+use App\Entity\life\ProfilNutrition;
 use App\Form\ProfilNutritionType;
 use App\Repository\ProfilNutritionRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

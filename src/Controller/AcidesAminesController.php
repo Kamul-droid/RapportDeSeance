@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\AcidesAmines;
+use App\Entity\life\AcidesAmines;
 use App\Form\AcidesAminesType;
 use App\Repository\AcidesAminesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ProfilRachidien;
+use App\Entity\life\ProfilRachidien;
 use App\Form\ProfilRachidienType;
 use App\Repository\ProfilRachidienRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
