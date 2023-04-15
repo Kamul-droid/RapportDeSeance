@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilCellComRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilCellComRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilCellComRepository::class)

@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilDimensionnelRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilDimensionnelRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilDimensionnelRepository::class)

@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilOreillesYeuxRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilOreillesYeuxRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilOreillesYeuxRepository::class)

@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilMusculaireRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilMusculaireRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilMusculaireRepository::class)

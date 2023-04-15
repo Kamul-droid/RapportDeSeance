@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilRifeSimiliRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilRifeSimiliRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilRifeSimiliRepository::class)

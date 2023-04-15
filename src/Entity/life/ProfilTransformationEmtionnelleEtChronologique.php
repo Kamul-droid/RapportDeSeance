@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilTransformationEmtionnelleEtChronologiqueRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilTransformationEmtionnelleEtChronologiqueRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilTransformationEmtionnelleEtChronologiqueRepository::class)

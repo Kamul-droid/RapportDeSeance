@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\RegistreSusceptibiliteRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\RegistreSusceptibiliteRepository;
 
 /**
  * @ORM\Entity(repositoryClass=RegistreSusceptibiliteRepository::class)

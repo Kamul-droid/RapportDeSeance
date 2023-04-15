@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilRachidienRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilRachidienRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilRachidienRepository::class)

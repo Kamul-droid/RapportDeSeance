@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilCirculationCoeurRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilCirculationCoeurRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilCirculationCoeurRepository::class)

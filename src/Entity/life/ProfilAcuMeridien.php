@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilAcuMeridienRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilAcuMeridienRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilAcuMeridienRepository::class)

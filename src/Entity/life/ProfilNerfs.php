@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilNerfsRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilNerfsRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilNerfsRepository::class)

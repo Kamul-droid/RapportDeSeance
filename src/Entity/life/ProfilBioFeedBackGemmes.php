@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilBioFeedBackGemmesRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilBioFeedBackGemmesRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilBioFeedBackGemmesRepository::class)

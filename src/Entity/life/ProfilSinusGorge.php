@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilSinusGorgeRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilSinusGorgeRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilSinusGorgeRepository::class)

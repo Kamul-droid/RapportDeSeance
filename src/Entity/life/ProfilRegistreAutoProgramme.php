@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilRegistreAutoProgrammeRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilRegistreAutoProgrammeRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilRegistreAutoProgrammeRepository::class)

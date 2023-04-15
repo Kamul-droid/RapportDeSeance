@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilCouleursChakrasRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilCouleursChakrasRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilCouleursChakrasRepository::class)

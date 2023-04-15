@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilCerveauRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilCerveauRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilCerveauRepository::class)

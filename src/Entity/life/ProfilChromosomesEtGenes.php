@@ -2,8 +2,9 @@
 
 namespace App\Entity\life;
 
-use App\Repository\ProfilChromosomesEtGenesRepository;
+use App\Entity\FicheClient;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilChromosomesEtGenesRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ProfilChromosomesEtGenesRepository::class)
