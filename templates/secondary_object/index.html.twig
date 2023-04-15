@@ -1,41 +1,68 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}SecondaryObject index{% endblock %}
+{% block title %}Liste des motifs secondaires{% endblock %}
 
 {% block body %}
-<div class="container">
-    <div class="col-md-5">
-    <h1>SecondaryObject index</h1>
-    <h2 class="btn-danger"> 
-        <a href="{{ path('app_quantareport_new') }}">Create report </a>
-    </h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Subject</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for secondary_object in secondary_objects %}
-            <tr>
-                <td>{{ secondary_object.id }}</td>
-                <td>{{ secondary_object.subject }}</td>
-                <td>
-                    <a href="{{ path('app_secondary_object_show', {'id': secondary_object.id}) }}">show</a>
-                    <a href="{{ path('app_secondary_object_edit', {'id': secondary_object.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<section>
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Liste des motifs secondaires</h1>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+            
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Subject</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for secondary_object in secondary_objects %}
+                    <tr>
+                        <td>{{ secondary_object.id }}</td>
+                        <td>{{ secondary_object.subject }}</td>
+                        <td>
+                            <a href="{{ path('app_secondary_object_show', {'id': secondary_object.id}) }}">show</a>
+                            <a href="{{ path('app_secondary_object_edit', {'id': secondary_object.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
 
-    <a href="{{ path('app_secondary_object_new') }}">Create new</a>
-</div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="text-center" style="margin:auto ; ">
+                        <a href="{{ path('app_quantareport_index') }}" class="btn btn-primary">Liste des rapports</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="text-center" style="margin:auto ; ">
+                        <a href="{{ path('app_quantareport_new') }}" class="btn btn-primary">Nouveau rapport</a>
+                        
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="text-center" style="margin:auto ; ">
+                        
+                        <a href="{{ path('app_secondary_object_new') }}" class="btn btn-primary">Nouveau motif</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+            
+        </div>
     </div>
+</section>
+      
+    
     {% endblock %}

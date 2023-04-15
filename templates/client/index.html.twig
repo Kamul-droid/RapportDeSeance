@@ -1,14 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Client index{% endblock %}
+{% block title %}Listes des clients{% endblock %}
 
 {% block body %}
-    <h1>Client index</h1>
-    <h2 class="btn-danger"> 
-        <a href="{{ path('app_quantareport_new') }}">Create report </a>
-    </h2>
+<section>
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Listes des clients</h1>
+        </div>
 
-    <table class="table">
+         <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -63,6 +64,34 @@
         {% endfor %}
         </tbody>
     </table>
+    <div class="row">
+           
+            
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    <a href="{{ path('app_quantareport_index') }}" class="btn btn-primary">Liste des rapports</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    <a href="{{ path('app_quantareport_new') }}" class="btn btn-primary">Nouveau rapport</a>
+                    
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    
+                    <a href="{{ path('app_client_new') }}" class="btn btn-primary">Nouveau client</a>
+                </div>
+            </div>
+    </div>
+    </div>
+</section>
 
-    <a href="{{ path('app_client_new') }}">Create new</a>
+    
+    
+
+   
+    
+
 {% endblock %}

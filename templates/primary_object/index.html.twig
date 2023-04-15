@@ -1,12 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}PrimaryObject index{% endblock %}
+{% block title %}Liste des motifs principales{% endblock %}
 
 {% block body %}
-    <h1>PrimaryObject index</h1>
-    <h2 class="btn-danger"> 
-        <a href="{{ path('app_quantareport_new') }}">Create report </a>
-    </h2>
+<section>
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Nouveau motif</h1>
+        </div>
+
+        
     <table class="table">
         <thead>
             <tr>
@@ -32,6 +35,30 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_primary_object_new') }}">Create new</a>
+     <div class="row">
+           
+            
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    <a href="{{ path('app_quantareport_index') }}" class="btn btn-primary">Liste des rapports</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    <a href="{{ path('app_quantareport_new') }}" class="btn btn-primary">Nouveau rapport</a>
+                    
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    
+                    <a href="{{ path('app_primary_object_new') }}" class="btn btn-primary">Nouveau motif</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+    
+    
 {% endblock %}

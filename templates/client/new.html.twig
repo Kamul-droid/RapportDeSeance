@@ -1,11 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Client{% endblock %}
+{% block title %}Nouveau Client{% endblock %}
 
 {% block body %}
-    <h1>Create new Client</h1>
-
+<section>
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Nouvelle fiche cliente </h1>
+        </div>
     {{ include('client/_form.html.twig') }}
 
-    <a href="{{ path('app_client_index') }}">back to list</a>
+        <div class="row">
+           
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                     <a href="{{ path('app_client_index') }}" class="btn btn-primary">Liste des clients</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    <a href="{{ path('app_quantareport_index') }}" class="btn btn-primary">Liste des rapports</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-center" style="margin:auto ; ">
+                    <a href="{{ path('app_quantareport_new') }}" class="btn btn-primary">Nouveau rapport</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
 {% endblock %}
