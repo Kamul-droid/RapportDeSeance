@@ -1,20 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Quantareport index{% endblock %}
+{% block title %}Liste des rapports{% endblock %}
 
 {% block body %}
-    <h1>Quantareport index</h1>
-
-    <table class="table">
+<section>
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Table des rapports de séance du Quantascan</h1>
+            
+        </div>
+    </div>
+    
+    <div class="text-center" style="margin-top:125px ; margin-bottom:50px; ">
+        
+        <a href="{{ path('app_quantareport_new') }}" class="btn btn-primary">Nouveau rapport</a>
+    </div>
+     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Consult_method</th>
-                <th>Started_at</th>
-                <th>Ended_at</th>
-                <th>Soundplay</th>
-                <th>Comment</th>
-                <th>Rdate</th>
+                <th>Methode de consultation</th>
+                <th>Début de la séance </th>
+                <th>Fin de la séance</th>
+                <th>Prochain rendez-vous</th>
+                <th>Client</th>
+                
                 <th>actions</th>
             </tr>
         </thead>
@@ -25,12 +35,12 @@
                 <td>{{ quantareport.consultMethod }}</td>
                 <td>{{ quantareport.startedAt ? quantareport.startedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ quantareport.endedAt ? quantareport.endedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ quantareport.soundplay }}</td>
-                <td>{{ quantareport.comment }}</td>
                 <td>{{ quantareport.rdate ? quantareport.rdate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ quantareport.client.name   }} {{ quantareport.client.surname}}</td>
+               
                 <td>
-                    <a href="{{ path('app_quantareport_show', {'id': quantareport.id}) }}">show</a>
-                    <a href="{{ path('app_quantareport_edit', {'id': quantareport.id}) }}">edit</a>
+                    <a href="{{ path('app_quantareport_show', {'id': quantareport.id}) }}" class="btn btn-primary">Afficher</a>
+                    <a href="{{ path('app_quantareport_edit', {'id': quantareport.id}) }}" class="btn btn-info">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -41,5 +51,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_quantareport_new') }}">Create new</a>
+
+</section>
+    
+
+   
 {% endblock %}

@@ -1,13 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Quantareport{% endblock %}
+{% block title %}Modification du rapport{% endblock %}
 
 {% block body %}
-    <h1>Edit Quantareport</h1>
+<section>
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Modification du rapport</h1>
+            
+        </div>
 
-    {{ include('quantareport/_form.html.twig', {'button_label': 'Update'}) }}
+            {{ include('quantareport/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_quantareport_index') }}">back to list</a>
-
+    
     {{ include('quantareport/_delete_form.html.twig') }}
+    </div>
+     <div class="text-center" style="margin-top:125px ; margin-bottom:50px; ">
+        <a href="{{ path('app_quantareport_index') }}" class="btn btn-primary">Liste des rapports</a>
+    </div>
+</section>
+    
+
+
 {% endblock %}

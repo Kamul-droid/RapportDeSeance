@@ -1,46 +1,289 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Quantareport{% endblock %}
+{% block title %}Lecture du rapport{% endblock %}
 
 {% block body %}
-    <h1>Quantareport</h1>
+<section>
+    <div class="container " style="margin:auto;">
+        <div class="form-group col-lg-12 ">
+            <h1 class="text-center " style="color:black; margin:75px 50px; font-size:50px;">Rapport de séance  {{ quantareport.client.name}} {{ quantareport.client.surname}} </h1>
+            
+        </div>
+        <div class="row">
+        
+            <div class="row">
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ quantareport.id }}</td>
-            </tr>
-            <tr>
-                <th>Consult_method</th>
-                <td>{{ quantareport.consultMethod }}</td>
-            </tr>
-            <tr>
-                <th>Started_at</th>
-                <td>{{ quantareport.startedAt ? quantareport.startedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Ended_at</th>
-                <td>{{ quantareport.endedAt ? quantareport.endedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Soundplay</th>
-                <td>{{ quantareport.soundplay }}</td>
-            </tr>
-            <tr>
-                <th>Comment</th>
-                <td>{{ quantareport.comment }}</td>
-            </tr>
-            <tr>
-                <th>Rdate</th>
-                <td>{{ quantareport.rdate ? quantareport.rdate|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+                <div class="col-4">
+                    <h6> Identifiant :</h6>
+                </div>
+                <div class="col-8 h6">
+                    {{ quantareport.id }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h6> Méthode de consultation :</h6>
+                </div>
+                <div class="col-8 h6">
+                    {{ quantareport.consultMethod }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h6> Début de la consultation :</h6>
+                </div>
+                <div class="col-8 h6">
+                    {{ quantareport.startedAt ? quantareport.startedAt|date('Y-m-d H:i:s') : '' }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h6> Fin de la consultation :</h6>
+                </div>
+                <div class="col-8 h6">
+                    {{ quantareport.endedAt ? quantareport.endedAt|date('Y-m-d H:i:s') : '' }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 ">
+                    <h6> Date du prochain rendez-vous :</h6>
+                </div>
+                <div class="col-8 h6">
+                    {{ quantareport.rdate ? quantareport.rdate|date('Y-m-d H:i:s') : '' }}
+                </div>
+            </div>
+            <div class="row " style="margin-top:50px;">
+                <div class="col-4 ">
+                    <h6> Liste des musiques écoutées :</h6>
+                </div>
+                <div class="col-8 h6">
+                    {{ quantareport.soundplay }}
+                </div>
+            </div>
+            <div class="row" style="">
+                <div class="col-4 ">
+                    <h6> Observations :</h6>
+                </div>
+                <div class="col-8 h6">
+                    {{ quantareport.comment }}
+                </div>
+            </div>
 
-    <a href="{{ path('app_quantareport_index') }}">back to list</a>
+            <div class="row text-center" style="margin-top:50px; justify-content:center;">
+              <h2>Historique du patient</h2>
+            </div>
 
-    <a href="{{ path('app_quantareport_edit', {'id': quantareport.id}) }}">edit</a>
+            <div class="row" style="margin-top:50px;">
+              <h4>Motifs</h4>
+            </div>
+            <div class="row" style="margin-top:5px;">
+                <div class="col-4 ">
+                    <h6> Principale:</h6>
+                </div>
+                <div class="col-8 h6">
+                    <div class="row">
+                        {% for item in quantareport.pobject %}
+                            {{ item.value }}, 
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:5px;">
+                <div class="col-4 ">
+                    <h6> Secondaire:</h6>
+                </div>
+                <div class="col-8 h6">
+                    <div class="row">
+                        {% for item in quantareport.sobject %}
+                            {{ item.subject }}, 
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
 
-    {{ include('quantareport/_delete_form.html.twig') }}
+            <div class="row" style="margin-top:50px;">
+              <h4>Etat général</h4>
+            </div>
+            <div class="row" style="margin-top:5px;">
+                {% for item in quantareport.gstate %}
+                    <div class="col-4 " style="margin-top:5px;">
+                        <h6> Description:</h6>
+                    </div>
+                    <div class="col-8 h6">
+                        {{ item.descript.subject }}
+                    </div>
+                    <div class="col-4 ">
+                        <h6> Depuis:</h6>
+                    </div>
+                    <div class="col-8 h6">
+                        {{ item.since ? item.since|date('Y-m-d H:i:s') : '' }}
+                    </div>
+                    <div class="col-4 ">
+                        <h6> Durée:</h6>
+                    </div>
+                    <div class="col-8 h6">
+                        {{ item.duration }}
+                    </div>
+                    <div class="col-4 ">
+                        <h6> Observation:</h6>
+                    </div>
+                    <div class="col-8 h6">
+                        {{ item.observation }}
+                    </div>
+                    <div class="" style="margin-bottom:8px;">
+                        
+                    </div>
+                {% endfor %}
+            </div>
+            
+             <div class="row" style="margin-top:50px; ">
+              <h3>Historique de santé</h3>
+            </div>
+            <div class="row" style="margin-top:50px;">
+                {% for item in quantareport.health %}
+                    <div class="col-4 " style="margin-top:5px;">
+                        <h6> Malaise:</h6>
+                    </div>
+                    <div class="col-8 h6">
+                        {{ item.illness }}
+                    </div>
+                    <div class="col-4 ">
+                        <h6> Evènement:</h6>
+                    </div>
+                    <div class="col-8 h6">
+                        {{ item.event ? item.event|date('Y-m-d H:i:s') : '' }}
+                    </div>
+                    
+                    <div class="col-4 ">
+                        <h6> Observation:</h6>
+                    </div>
+                    <div class="col-8 h6">
+                        {{ item.descript }}
+                    </div>
+                    <div class="" style="margin-bottom:8px;">
+                        
+                    </div>
+                {% endfor %}
+            </div>
+
+             <div class="row text-center" style="margin-top:50px; justify-content:center;">
+              <h2>Données de la séance</h2>
+            </div>
+            <div class="row" style="margin-top:50px;">
+                {% for item in quantareport.qdata %}
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Module :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.quanfield.name }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Pictograme :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.picto }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Maladie :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.disease }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Microbes et bactéries :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.microBact }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Emotion et conflit :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.emotionConflit }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Metathérapie :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.mt }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Amélioration / Affaiblissement :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.incDec }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Végétotest :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.vgt }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Médicament :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.med }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <h6> Observation :</h6>
+                        </div>
+                        <div class="col-8 h6">
+                            {{ item.observation }}
+                        </div>
+                    </div>
+                    <div class="" style="margin-bottom:15px;">
+                        
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+
+        
+        <div class="row">
+            
+            <div class="col-6">
+                <div class="text-center" style="margin:auto; ">
+                    <a href="{{ path('app_quantareport_edit', {'id': quantareport.id}) }}" class="btn btn-primary">Modifier</a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="text-center" style="margin:auto ; ">
+                    <a href="{{ path('app_quantareport_index') }}" class="btn btn-primary">Liste des rapports</a>
+                </div>
+            </div>
+
+        </div>
+    
+        
+        {{ include('quantareport/_delete_form.html.twig') }}
+
+        
+
+    </div>
+   
+    
+</section>
+
 {% endblock %}

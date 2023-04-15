@@ -14,6 +14,8 @@ use App\Repository\QuanDataRepository;
 use App\Repository\GlobalStateRepository;
 use App\Repository\QuantareportRepository;
 use App\Repository\HealthHistoryRepository;
+use App\Repository\PrimaryObjectRepository;
+use App\Repository\SecondaryObjectRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -37,7 +39,7 @@ class QuantareportController extends AbstractController
     /**
      * @Route("/new", name="app_quantareport_new", methods={"GET", "POST"})
      */
-    public function new(Request $request, QuantareportRepository $quantareportRepository, GlobalStateRepository $globalStateRepository, HealthHistoryRepository $healthHistoryRepository, QuanDataRepository $quanDataRepository): Response
+    public function new(Request $request, QuantareportRepository $quantareportRepository, GlobalStateRepository $globalStateRepository, HealthHistoryRepository $healthHistoryRepository, QuanDataRepository $quanDataRepository, SecondaryObjectRepository $secObjectRep, PrimaryObjectRepository $primObjectRep): Response
     {
         $quantareport = new Quantareport();
         $form = $this->createForm(QuantareportType::class, $quantareport);
@@ -71,11 +73,13 @@ class QuantareportController extends AbstractController
             }
             
             foreach ($quantareport ->getSobject() as $sobjet){
-                $quantareport -> addSobject($sobjet);
-                
+                $sobjet->setQuantareport($quantareport);
+                $secObjectRep->add($sobjet);
             }
             foreach ($quantareport ->getPobject() as $pobjet){
-                $quantareport -> addPobject($pobjet);
+                $pobjet->setQuantareport($quantareport);
+                $primObjectRep->add($pobjet);
+                
                 
             }
             // $startd = $form->get('started_at');
