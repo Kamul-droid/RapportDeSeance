@@ -2,10 +2,40 @@
 
 namespace App\Entity;
 
-use App\Repository\FicheClientRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\life\ProfilOs;
+use App\Entity\life\ProfilNerfs;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\life\ProfilAnimaux;
+use App\Entity\life\ProfilCellCom;
+use App\Entity\life\ProfilCerveau;
+use App\Entity\life\ProfilAllergie;
+use App\Entity\life\ProfilDentaire;
+use App\Entity\life\ProfilDigestifs;
+use App\Entity\life\ProfilNutrition;
+use App\Entity\life\ProfilRachidien;
+use App\Entity\life\ProfilCosmetique;
+use App\Entity\life\ProfilIridologie;
+use App\Entity\life\ProfilMusculaire;
+use App\Entity\life\ProfilRifeSimili;
+use App\Entity\life\ProfilSinusGorge;
+use App\Entity\life\ProfilAcuMeridien;
+use App\Entity\life\ProfilLymphatique;
+use App\Entity\life\ProfilDimensionnel;
+use App\Entity\life\ProfilOreillesYeux;
+use App\Entity\life\ProfilRespiratoire;
+use App\Entity\life\ProfilHomeopathique;
+use App\Repository\FicheClientRepository;
+use App\Entity\life\ProfilCouleursChakras;
+use App\Entity\life\ProfilNeuroEmotionnel;
+use App\Entity\life\ProfilCirculationCoeur;
+use Doctrine\Common\Collections\Collection;
+use App\Entity\life\ProfilBioFeedBackGemmes;
+use App\Entity\life\ProfilChromosomesEtGenes;
+use App\Entity\life\ProfilRegistreAutoProgramme;
+use Doctrine\Common\Collections\ArrayCollection;
+use App\Entity\life\ProfilDetoxEtStressMultiples;
+use App\Entity\life\ProfilRegistreSusceptibilite;
+use App\Entity\life\ProfilTransformationEmtionnelleEtChronologique;
 
 /**
  * @ORM\Entity(repositoryClass=FicheClientRepository::class)
